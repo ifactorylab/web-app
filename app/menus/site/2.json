@@ -1,0 +1,274 @@
+[
+  {
+    "name": "SMALL EATS",
+    "items": [
+      {
+        "price": "5.5",
+        "name": "toast",
+        "description": "jam / vegemite",
+        "currency": "£"
+      },
+      {
+        "price": "7.5",
+        "name": "fruit toast",
+        "description": "curd",
+        "currency": "£"
+      },
+      {
+        "price": "10.5",
+        "name": "apple bircher",
+        "description": "fresh berries, candied nuts",
+        "currency": "£"
+      },
+      {
+        "price": "11.5",
+        "name": "blt",
+        "description": "free range bacon, lettuce, tomatos, chipotle mayo",
+        "currency": "£"
+      },
+      {
+        "price": "14.0",
+        "name": "white anchovies",
+        "description": "peperonata, pine nuts, sourdough",
+        "currency": "£"
+      },
+      {
+        "price": "15.5",
+        "name": "french toast",
+        "description": "caramelised stone fruit, meander valley creme fraiche",
+        "currency": "£"
+      },
+      {
+        "price": "15.5",
+        "name": "omelette",
+        "description": "chorizo, kale, kasundi, croutons",
+        "currency": "£"
+      },
+      {
+        "price": "16.0",
+        "name": "house made potato cakes",
+        "description": "smoked salmon, poached egg, eggplant pesto",
+        "currency": "£"
+      },
+      {
+        "price": "",
+        "name": "EXTRAS",
+        "description": "egg | bacon | sausage | salmon | avo",
+        "currency": "£"
+      },
+      {
+        "price": "",
+        "name": "Lunch",
+        "description": "changes daily, sandwiches, salads, burgers. Check our instagram for updates.",
+        "currency": "£"
+      }
+    ]
+  },
+  {
+    "name": "SALADS",
+    "items": [
+      {
+        "price": "3.0",
+        "name": "espresso",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "3.5",
+        "name": "flat white | cap | latte | piccolo | mac",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "3.5",
+        "name": "long black",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "0.5",
+        "name": "extra shot | soy | single origin",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "4.0",
+        "name": "chai | hot chocolate | iced latte",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "7.0",
+        "name": "milkshake",
+        "description": "chocolate | butterscotch vanilla | white choc & strawberry jam",
+        "currency": "£"
+      },
+      {
+        "price": "5.0",
+        "name": "tea",
+        "description": "yi sin green | darjeeling | assam",
+        "currency": "£"
+      },
+      {
+        "price": "7.5",
+        "name": "banana & strawberry smoothie",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "8.5",
+        "name": "green smoothie",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "4.5",
+        "name": "sparkling water",
+        "description": "",
+        "currency": "£"
+      }
+    ]
+  },
+  {
+    "name": "MEAT",
+    "items": [
+      {
+        "price": "3.0",
+        "name": "espresso",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "3.5",
+        "name": "flat white | cap | latte | piccolo | mac",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "3.5",
+        "name": "long black",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "0.5",
+        "name": "extra shot | soy | single origin",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "4.0",
+        "name": "chai | hot chocolate | iced latte",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "7.0",
+        "name": "milkshake",
+        "description": "chocolate | butterscotch vanilla | white choc & strawberry jam",
+        "currency": "£"
+      },
+      {
+        "price": "5.0",
+        "name": "tea",
+        "description": "yi sin green | darjeeling | assam",
+        "currency": "£"
+      },
+      {
+        "price": "7.5",
+        "name": "banana & strawberry smoothie",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "8.5",
+        "name": "green smoothie",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "4.5",
+        "name": "sparkling water",
+        "description": "",
+        "currency": "£"
+      }
+    ]
+  },
+  {
+    "name": "PHO & NOODLE SOUP",
+    "items": [
+      {
+        "price": "9.5",
+        "name": "Chicken Pho",
+        "description": "",
+        "currency": "£"
+      },
+      {
+        "price": "10.5",
+        "name": "Ox Cheek au Vin Pho",
+        "description": "cinnamon, black cardamom & Pho noodle",
+        "currency": "£"
+      },
+      {
+        "price": "11.0",
+        "name": "Saigon Saté Pho",
+        "description": "hanger steak poached in a robust chilli broth, Thai basil & smashed nuts",
+        "currency": "£"
+      },
+      {
+        "price": "0.5",
+        "name": "Seafood Pho Noodle",
+        "description": "king prawns, squid & vegetables in Pho broth",
+        "currency": "£"
+      },
+      {
+        "price": "12.0",
+        "name": "Wonton Noodle",
+        "description": "prawn & pork dumplings, charsiu garlic chives",
+        "currency": "£"
+      },
+      {
+        "price": "9.75",
+        "name": "Tofu Bun Bo Hue (v)",
+        "description": "crispy & fresh tofu, lemongrass, whole chilli, in root vegetable stock",
+        "currency": "£"
+      },
+      {
+        "price": "9.0",
+        "name": "Assorted Mushroom Pho (v)",
+        "description": "shiitake, hon shimeji mushroom & chouchou in root vegetable broth",
+        "currency": "£"
+      },
+      {
+        "price": "9.5",
+        "name": "Classic Pho",
+        "description": "with Steak and & Brisket for varied flavour & texture",
+        "currency": "£"
+      },
+      {
+        "price": "10.5",
+        "name": "Hanoi 'Pho'",
+        "description": "a modern version of Pho with flash fried hanger steak & whole garlic",
+        "currency": "£"
+      },
+      {
+        "price": "10.5",
+        "name": "Saigon Pho",
+        "description": "with steak, brisket, fatty flank, skirt flank for a hearty rich taste",
+        "currency": "£"
+      },
+      {
+        "price": "10.5",
+        "name": "China Town Hofun",
+        "description": "beef meatball and dried radish",
+        "currency": "£"
+      },
+      {
+        "price": "14.5",
+        "name": "Special Large Combo Pho",
+        "description": "For the lovers of Pho!!! over a litre of broth with steak, brisket, fatty flank, beef meatball and egg yolk for the ultimate traditional flavour!!!",
+        "currency": "£"
+      }
+    ]
+  }
+]

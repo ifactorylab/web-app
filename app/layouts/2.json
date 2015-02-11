@@ -1,0 +1,30 @@
+{
+  "id": "1212",
+  "site_id": "1212121",
+  "template_id": "2",
+  "structure": {
+    "title": "Viet Grill",
+    "sub_title1": "EAT, DRINK, VIETNAM",
+    "sub_title2": "our menu",
+    "sub_title3": "CONTACT US",
+    "sub_title_desc1": "Classic and modern Vietnamese Cooking in Shoreditch",
+    "sub_title_desc2": "Seasonal and simple food done well.",
+    "content1_title": "About Viet Grill",
+    "content1_line1": "Our modern yet cosy restaurant emulates the hustle and bustle of busy Vietnamese life, and is the perfect backdrop to serve up the light and aromatic flavours of Vietnamese cuisine. Enjoy slurping a spicy Pho at our Pho-bar and delight in our unique menu of authentic dishes and Vietnamese inspired cocktails.",
+    "content1_line2": "As at all of our restaurants we pride ourselves on offering you an authentic taste of Vietnam using well sourced ingredients from the British Isles whenever possible. Our meat and fish is always British and our vegetables are fresh, daily delivered.  Every dish we cook at is made with equal passion – both a la carte and street food. Take our beef Pho for example, you won’t find us using an inferior cut just because Pho is seen as an inexpensive dish, we use the best and so at Viet Grill you’ll find rib-eye steak in this traditional Vietnamese soup.",
+    "content1_line3": "Whatever you order at this lively Vietnamese hang-out we’ll happily tell you why it’s better than our competitors, our monkfish is caught daily in Devon and our squid is from Dorset.  We care because you care and we don’t stop there. We have a saying at Viet Grill which goes something like this 'to make the simplest of dishes taste good you need the ingredients of time and passion' and we have plenty of it.",
+    "content2_title": "The London Foodie",
+    "content2_line1": "More sophisticated and authentically Vietnamese than other restaurants in the area. Highly reommended",
+    "content3_title": "Boat",
+    "content3_line1": "We bake every morning and will always have fresh cakes, pastries and muffins on hand.",
+    "content4_title": "Food",
+    "content4_line1": "Seasonal and simple. Our menu is designed with clean, tasty flavours in mind.",
+    "main_background_img1": "/layouts/2/a.png",
+    "main_background_img2": "/layouts/2/b.png",
+    "main_background_img3": "/layouts/2/c.png",
+    "intro_img1": "/layouts/2/d.png",
+    "intro_img2": "/layouts/2/e.png",
+    "intro_img3": "/layouts/2/f.png",
+    "intro_img4": "/layouts/2/g.png"
+  }
+}

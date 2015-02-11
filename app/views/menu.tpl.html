@@ -1,0 +1,25 @@
+<!--div class="menu-wrapper menu-style-classic">
+  <div class="menus">
+    <div class="menu menu-">
+      <div class="menu-section" ng-repeat="category in categories">
+        <div class="menu-section-header">
+          <div class="menu-section-title">{{category.name}}</div>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item" ng-repeat="menu in category.menu_items" menu-classic-item>
+            <span class="menu-item-price-top">
+              <span class="currency-sign"></span>{{menu.price}}
+            </span>
+            <div class="menu-item-title">
+              {{menu.title}}
+            </div>
+            <div class="menu-item-description">{{menu.description}}</div>
+            <div class="menu-item-price-bottom">
+              <span class="currency-sign"></span>{{menu.price}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div-->
