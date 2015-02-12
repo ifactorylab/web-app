@@ -17,53 +17,34 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
-    'ifMenus',
-    'ifLayouts',
-    'ifLocations',
-    'angularLocalStorage',
+    'angularLocalStorage'
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/:appId/show-cart', {
+        templateUrl: 'views/show-cart-view.tpl.html',
+        controller: 'ShowCartCtrl'
+      })
+      .when('/:appId/checkout', {
+        templateUrl: 'views/checkout-view.tpl.html',
+        controller: 'CheckoutCtrl'
+      })
       .when('/:appId', {
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
-          /*
-          dependency: function($q, $rootScope) {
-            var defer = $q.defer();
-            var dependencies = [ 'scripts/directives/layout.js' ];
-             $script(dependencies, function() {
-               // all dependencies have now been loaded by $script.js so resolve the promise
-               $rootScope.$apply(function() {
-                 defer.resolve();
-               });
-            });
-            return defer.promise;
-          },*/
-          layout: ['$q', '$route', 'layouts', function($q, $route, layouts) {
+          layout: function($q, $route, Layouts) {
             var appId = $route.current.params.appId;
-            var defer = $q.defer();
-            layouts.get(appId).then(function(layout) {
-              defer.resolve(layout);
-            });
-            return defer.promise;
-          }],
-          menu: ['$q', '$route', 'menus', function($q, $route, menus) {
+            return Layouts.getLayout(appId);
+          },
+          menu: function($q, $route, Menus) {
             var appId = $route.current.params.appId;
-            var defer = $q.defer();
-            menus.list(appId).then(function(menu) {
-              defer.resolve(menu);
-            });
-            return defer.promise;
-          }],
-          location: ['$q', '$route', 'locations', function($q, $route, locations) {
+            return Menus.getMenu(appId);
+          },
+          location: function($q, $route, Locations) {
             var appId = $route.current.params.appId;
-            var defer = $q.defer();
-            locations.list(appId).then(function(location) {
-              defer.resolve(location);
-            });
-            return defer.promise;
-          }]
+            return Locations.getLocation(appId);
+          }
         }
       })
       .otherwise({

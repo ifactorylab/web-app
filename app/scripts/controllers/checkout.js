@@ -5,10 +5,13 @@ angular.module('webApp')
                               '$location',
                               '$window',
                               '$http',
+                              '$routeParams',
                               'menusService',
                               'storage',
-  function($scope, $location, $window, $http, menusService, storage) {
-    $scope.shoppingCart = storage.get('shoppingCart');
+  function($scope, $location, $window, $http, $routeParams, menusService, storage) {
+    $scope.appId = $routeParams.appId;
+    $scope.shoppingCartKey = 'shoppingCart-appId-' + $scope.appId;
+    $scope.shoppingCart = storage.get($scope.shoppingCartKey);
     /*
     $scope.billingInfo = { 'firstName': '',
                            'lastName': '',
@@ -59,7 +62,7 @@ angular.module('webApp')
         $scope.requiredFieldEmptyErrorCreditCard = true;
       } else {
         // send data to the server and clear cart cache.
-        storage.set('shoppingCart', '');
+        storage.set($scope.shoppingCartKey, '');
         $location.path('/');
         alert('order success');
       }

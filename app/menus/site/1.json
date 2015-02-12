@@ -45,12 +45,12 @@
         "description": "smoked salmon, poached egg, eggplant pesto"
       },
       {
-        "price": "",
+        "price": "16.0",
         "name": "EXTRAS",
         "description": "egg | bacon | sausage | salmon | avo"
       },
       {
-        "price": "",
+        "price": "16.0",
         "name": "Lunch",
         "description": "changes daily, sandwiches, salads, burgers. Check our instagram for updates."
       }
@@ -106,7 +106,7 @@
       },
       {
         "price": "4.5",
-        "title": "sparkling water",
+        "name": "sparkling water",
         "description": ""
       }
     ]

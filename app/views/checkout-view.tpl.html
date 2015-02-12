@@ -3,12 +3,12 @@
     <!-- LOGO -->
     <div id="store-logo">
       <h1>
-        <a href="/">
+        <a href=/#/{{appId}}>
           <span class="site-title">MerriWeather</span>
         </a>
       </h1>
     </div>
-  
+
     <!-- CART/COUPON SUMMARIES -->
     <div id="summary-wrapper" class="right-column-wrapper">
       <div id="cart-summary" class="summary">
@@ -23,7 +23,7 @@
             <div class="title">Order Summary</div>
 
             <table>
-              <thead> 
+              <thead>
                 <tr>
                   <td class="item">Item</td>
                   <td class="quantity">Quantity</td>
@@ -32,7 +32,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr ng-repeat="(key, item) in shoppingCart.items">          
+                <tr ng-repeat="(key, item) in shoppingCart.items">
                   <td class="item">
                     <div class="item-image">
                       <img src="https://static.squarespace.com/static/5252fc28e4b0ec71254bc248/52658eb2e4b06478e0b62532/526ab732e4b09b70853c5c0c/1382725427702/1010025_2.jpg?format=100w">
@@ -42,15 +42,15 @@
                       <div class="variant-info"></div>
                     </div>
                   </td>
-          
-                  <td class="quantity">                
+
+                  <td class="quantity">
                     <input editable-content ng-model="content" size="1" value={{item.quantity}}>
                   </td>
-              
+
                   <td class="price">
                     <span class="sqs-money-native">{{item.price}}</span>
                   </td>
-              
+
                   <td class="remove" ng-click="removeItem(item)">
                     <div class="remove-item"></div>
                   </td>
@@ -62,27 +62,27 @@
               <div class="price"><span class="sqs-money-native">{{shoppingCart.totalPrice}}</span></div>
               <div class="label">Subtotal</div>
             </div>
-          
+
             <div class="tax total">
               <div class="price"><span class="sqs-money-native">0.00</span></div>
               <div class="label">Tax</div>
             </div>
-          
+
             <div class="shipping total">
               <div class="price"><span class="sqs-money-native">0.00</span></div>
               <div class="label">Shipping</div>
             </div>
-          
+
             <div class="discounts total" style="display: none;">
               <div class="price">- <span class="sqs-money-native">0.00</span></div>
               <div class="label">Discounts</div>
             </div>
-          
+
             <div class="grand-total total">
               <div class="price"><span class="sqs-money-native">{{shoppingCart.totalPrice}}</span></div>
               <div class="label">Grand Total</div>
             </div>
-          
+
             <div class="empty-message">
               You have nothing in your shopping cart.&nbsp;
               <a href="http://supply-demo.squarespace.com">Continue shopping</a>
@@ -93,21 +93,21 @@
       <div id="coupon-summary" class="summary hidden">
         <div class="yui3-widget sqs-widget sqs-checkout-coupon-list">
           <div class="sqs-checkout-coupon-list-content">
-            <div class="title">Coupons</div>          
+            <div class="title">Coupons</div>
               <fieldset>
                 <div class="field">
 
                 <label>
                   Promo Code
                 </label>
-          
+
                 <div class="codeline">
                   <div class="codeleft">
                     <input name="promoCode" class="field-element" type="text" placeholder="Promo Code" spellcheck="false">
                   </div>
-          
+
                   <!-- Redeem Button -->
-                  <div class="button redeem-coupon">Redeem</div> 
+                  <div class="button redeem-coupon">Redeem</div>
                 </div>
 
                 <!-- List -->
@@ -129,7 +129,7 @@
                   The coupons below are no longer valid. This can occur if a coupon expires
                   or if you remove an item from your shopping cart.
                 </div>
-          
+
                 <!-- No Longer Valid Coupons -->
                 <div class="invalid-coupon-list hidden">
                   <div class="yui3-widget sqs-widget sqs-data-widget sqs-dialog-field sqs-list data-state-loaded">
@@ -150,7 +150,7 @@
         </div>
       </div>
     </div>
-  
+
     <!-- CHECKOUT FORM -->
     <div id="form-wrapper" class="right-column-wrapper">
       <div class="yui3-widget sqs-widget sqs-checkout-form">
@@ -167,7 +167,7 @@
                     <label>First Name</label>
                     <input name="billingFirstName" ng-model='billingFirstName' class="field-element" placeholder="First Name" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30">
                   </div>
-                            
+
                   <!-- Last Name -->
                   <div id="billing-last-name" class="field last-name required">
                     <label>Last Name</label>
@@ -179,13 +179,13 @@
                     <label>Email Address</label>
                     <input name="email" ng-model='billingEmail' class="field-element" placeholder="Email" x-autocompletetype="email" type="text" spellcheck="false" maxlength="50">
                   </div>
-                            
+
                   <!-- Billing Address 1 -->
                   <div id="billing-address-1" class="field required">
                     <label>Address Line 1</label>
                     <input name="billingAddress1" ng-model='billingAddress1' class="field-element" placeholder="Address Line 1" type="text" spellcheck="false" maxlength="50">
                   </div>
-                            
+
                   <!-- Billing Address 2 -->
                   <div id="billing-address-2" class="field">
                     <label>Address Line 2</label>
@@ -198,7 +198,7 @@
                     <select name="billingCountry" ng-model='billingCountry' class="field-element" x-autocompletetype="country-name">
                     <option value="United Kingdom">United Kingdom</option></select>
                   </div>
-                            
+
                   <!-- City -->
                   <div id="billing-city" data-label="City" class="field city required">
                     <label>City</label>
@@ -268,7 +268,7 @@
                     <label>Zip / Postal</label>
                     <input name="billingZip" ng-model='billingZip' class="field-element" placeholder="Zip / Postal" type="text" spellcheck="false" maxlength="10">
                   </div>
-              
+
                   <div style="clear:both;"></div>
                   <div id="phone" data-label="Phone Number" class="field phone">
                     <label>Phone Number</label>
@@ -283,12 +283,12 @@
                 </fieldset>
 
                 <div class="saved-fieldset" ng-show='completedBillingInfo'>
-                  <div>{{billingFirstName}}&nbsp;{{billingLastName}}</div>                
-                  <div>{{billingEmail}}</div>                
+                  <div>{{billingFirstName}}&nbsp;{{billingLastName}}</div>
+                  <div>{{billingEmail}}</div>
                   <div>{{billingAddress1}}</div>
                   <div>{{billingAddress2}}</div>
-                  <div>{{billingCity}},&nbsp;TX&nbsp;&nbsp;{{billingZip}}</div>                
-                  <div>{{billingCountry}}</div>                                  
+                  <div>{{billingCity}},&nbsp;TX&nbsp;&nbsp;{{billingZip}}</div>
+                  <div>{{billingCountry}}</div>
                   <div>{{billingPhone}}</div>
                 </div>
               </div>
@@ -308,31 +308,31 @@
 
                   <!-- Shipping Address -->
                   <div id="shipping-address-wrapper" ng-hide='shippingSameAsBilling'>
-  
+
                     <!-- First Name -->
                     <div id="shipping-first-name" data-label="First Name" class="field first-name required">
                       <label>First Name</label>
                       <input name="shippingFirstName" ng-model='shippingFirstName' class="field-element" placeholder="First Name" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30">
                     </div>
-                      
+
                     <!-- Last Name -->
                     <div id="shipping-last-name" data-label="Last Name" class="field last-name required">
                       <label>Last Name</label>
                       <input name="shippingLastName" ng-model='shippingLastName' class="field-element" placeholder="Last Name" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30">
                     </div>
-                        
+
                     <!-- Shipping Address 1 -->
                     <div id="shipping-address-1" data-label="Address Line 1" class="field address required">
                       <label>Address Line 1</label>
                       <input name="shippingAddress1" ng-model='shippingAddress1' class="field-element" type="text" x-autocompletetype="address-line1" placeholder="Street Address 1" spellcheck="false" maxlength="50">
-                    </div>          
-              
+                    </div>
+
                     <!-- Shipping Address 2 -->
                     <div id="shipping-address-2" data-label="Address Line 2" class="field address">
                       <label>Address Line 2</label>
                       <input name="shippingAddress2" ng-model='shippingAddress2' class="field-element" type="text" placeholder="Street Address 2" x-autocompletetype="address-line2" spellcheck="false" maxlength="50">
                     </div>
-    
+
                     <!-- Country -->
                     <div id="shipping-country" data-label="Country" class="field country required">
                       <label>Country</label>
@@ -340,7 +340,7 @@
                         <option value="United Kingdom">United Kingdom</option>
                       </select>
                     </div>
-    
+
                     <!-- City -->
                     <div id="shipping-city" data-label="City" class="field city required">
                       <label>City</label>
@@ -404,7 +404,7 @@
                         <option value="WY">WY</option>
                       </select>
                     </div>
-    
+
                     <!-- Zip Code -->
                     <div id="shipping-zip" data-label="Zip Code" class="field zip required">
                       <label>Zip / Postal</label>
@@ -413,7 +413,7 @@
                   </div> <!-- end #shipping-address -->
 
                   <!--div class="subtitle">Select a Shipping Method</div-->
-  
+
                   <!-- Shipping Options -->
                   <!--div id="shipping-options">
                     <div class="yui3-widget sqs-widget sqs-checkout-form-shipping-options">
@@ -422,27 +422,27 @@
         You cannot continue checkout because this store has not configured any
       shipping options for your country.
                         </div>
-    
+
                         <div class="warning-message zip-warning-message">
                           <img src="/images/tiny-alert.png">Shipping methods require your zip/postal code to estimate.
                         </div>
-                      
+
                         <div class="warning-message zip-invalid-warning-message">
                           <img src="/images/tiny-alert.png">The zip code you entered is not valid.
                         </div>
-                      
+
                         <div class="warning-message weight-missing-warning-message">
                           <img src="/images/tiny-alert.png">All products in this cart are missing weight information.
                         </div>
-                      
+
                         <div class="warning-message service-unavailable-warning-message">
                           <img src="/images/tiny-alert.png">A method is unavailable for some items due to size restrictions.
                         </div>
-    
+
                         <div class="warning-message carrier-warning-message">
                           <img src="/images/tiny-alert.png">Something went wrong reaching the shipping carrier for estimates.
                         </div>
-    
+
                         <div class="loading-spinner">
                           <div class="yui3-widget sqs-spin dark" style="height: 15px; width: 15px;">
                             <div class="sqs-spin-content yui3-widget-content-expanded"></div>
@@ -452,7 +452,7 @@
                       </div>
                     </div>
                   </div-->
-                    
+
                   <div class="btn-container" ng-hide='shippingSameAsBilling'>
                     <div class="error-summary" ng-show='requiredFieldEmptyErrorShippingInfo'>First Name, Last Name, Email Address, Address Line 1, City, Zip Code required. </div>
                     <div class="button continue-button" ng-click='shippingInfoContinue()'>Continue Shipping</div>
@@ -460,12 +460,12 @@
                 </fieldset>
 
                 <div class="saved-fieldset" ng-show='completedShippingInfo && !shippingSameAsBilling'>
-                  <div>{{shippingFirstName}}&nbsp;{{shippingLastName}}</div>                
-                  <div>{{shippingEmail}}</div>                
+                  <div>{{shippingFirstName}}&nbsp;{{shippingLastName}}</div>
+                  <div>{{shippingEmail}}</div>
                   <div>{{shippingAddress1}}</div>
                   <div>{{shippingAddress2}}</div>
-                  <div>{{shippingCity}},&nbsp;TX&nbsp;&nbsp;{{shippingZip}}</div>                
-                  <div>{{shippingCountry}}</div>                                  
+                  <div>{{shippingCity}},&nbsp;TX&nbsp;&nbsp;{{shippingZip}}</div>
+                  <div>{{shippingCountry}}</div>
                   <div>{{shippingPhone}}</div>
                 </div>
               </div>
@@ -484,7 +484,7 @@
                 </div>
                 <fieldset>
                   <!-- Credit Card -->
-                  <div id="credit-card">                    
+                  <div id="credit-card">
                     <!-- Name -->
                     <input name="cardHolderName" type="hidden">
                     <!-- Card Number -->
@@ -493,7 +493,7 @@
                       <input class="field-element" ng-model='cardNumber' type="text" size="20" autocomplete="off" placeholder="Credit Card Number" value="">
                     </div>
                     <!-- Expiry/CVC -->
-                    <div id="expiry-cvc">                
+                    <div id="expiry-cvc">
                       <!-- Expiry Month -->
                       <div id="card-expiry-month" data-label="Exp. Mo." class="field required">
                         <label>Exp. Mo.</label>
@@ -511,7 +511,7 @@
                           <option value="11">11</option>
                           <option value="12">12</option>
                         </select>
-                      </div>                
+                      </div>
                       <!-- Expiry Year -->
                       <div id="card-expiry-year" data-label="Exp. Yr." class="field required">
                         <label>Exp. Yr.</label>
@@ -527,29 +527,29 @@
                           <option value="2022">2022</option>
                           <option value="2023">2023</option>
                         </select>
-                      </div>                
+                      </div>
                       <!-- CVC -->
                       <div id="cvc" data-label="CVC" class="field required">
                         <label>CVC</label>
                         <input class="field-element" ng-model='cvc' type="text" size="4" autocomplete="off" placeholder="CVC" value="">
-                      </div>              
+                      </div>
                     </div>
                   </div> <!-- end #credit-card -->
-  
+
                   <!-- Secure payment conditions -->
                   <div id="comfort">
                     All transactions are secure and encrypted, and we never store your credit card information. Payments are
                     processed through Stripe. Payment information is also governed by
                     <a target="_blank" href="https://stripe.com/privacy">Stripe's privacy policy</a>.
-                  </div>                                
+                  </div>
                   <!-- Place Order -->
                   <div id="place-order">
                     <div class="error-summary" ng-show='requiredFieldEmptyErrorCreditCard'>Card Number, Exp. Yr., Exp. Mo., CVC required. </div>
                     <div id="place-order-button" class="button continue-button" ng-click='placeOrder()' value="Place Order">Place Order</div>
-                    <div class="trust"><img src="/images/checkout/truste.png"></div>                
+                    <div class="trust"><img src="/images/checkout/truste.png"></div>
                     <!-- hidden field to convey the Stripe Token so we may submit the charge -->
-                    <input name="stripeToken" type="hidden">                
-                    <!-- optional hidden fields -->                                    
+                    <input name="stripeToken" type="hidden">
+                    <!-- optional hidden fields -->
                   </div>
                 </fieldset>
               </div>

@@ -86,4 +86,48 @@ angular.module('webApp')
         scope.scaleToFill(w, 1, element);
       });
     };
+  })
+  .directive('layoutRatioAspectToFit', function($window) {
+    return function(scope, element, attrs) {
+      var w = angular.element($window);
+      var POPUP_IMAGE_RATIO = 2 / 3;
+      var MIN_WIDTH = 320;
+
+      scope.ratioAspectToFit = function(ratio, window, element) {
+        var parent = element.parent();
+        var width = parent.width();
+        var height = parseInt(width * ratio);
+        var left = 0;
+
+        if (height > parent.height()) {
+          height = parent.height();
+          width = parseInt(height / ratio);
+          left = parseInt((parent.width() - width) / 2);
+        }
+
+        if (parent.width() <= MIN_WIDTH) {
+          if (height * ratio <= parent.width()) {
+            return;
+          }
+        }
+
+        var top = (height - parent.height()) / 2;
+        element.css({
+          'font-size': 0,
+          top: (top * -1),
+          height: height,
+          width: width,
+          left: left,
+          position: 'relative'
+        });
+      };
+
+      scope.ratioAspectToFit(POPUP_IMAGE_RATIO, w, element);
+      w.bind('resize', function () {
+        scope.ratioAspectToFit(POPUP_IMAGE_RATIO, w, element);
+      });
+      w.bind('redraw', function() {
+        scope.ratioAspectToFit(POPUP_IMAGE_RATIO, w, element);
+      });
+    };
   });

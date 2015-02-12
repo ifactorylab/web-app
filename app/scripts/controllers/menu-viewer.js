@@ -29,13 +29,13 @@ angular.module('webApp')
       };
 
       $scope.addToCart = function(item, quantity) {
-        console.log(item.title + " x " + quantity + " has added to cart!!!");
+        console.log(item.name + " x " + quantity + " has added to cart!!!");
         var count = parseInt(quantity);
         $scope.shoppingCart.quantity += count;
         $scope.setItem(item, count, $scope.shoppingCart.items);
         $scope.shoppingCart.totalPrice = $scope.getTotalPrice($scope.shoppingCart.items);
         menusService.updateShoppingCart($scope.shoppingCart);
-        storage.set('shoppingCart', $scope.shoppingCart);
+        storage.set($scope.shoppingCartKey, $scope.shoppingCart);
       };
     }])
     /*

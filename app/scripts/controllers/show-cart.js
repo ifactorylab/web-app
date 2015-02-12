@@ -5,10 +5,12 @@ angular.module('webApp')
                               '$location',
                               '$window',
                               '$http',
+                              '$routeParams',
                               'menusService',
                               'storage',
-  function($scope, $location, $window, $http, menusService, storage) {
-    $scope.shoppingCart = storage.get('shoppingCart');
+  function($scope, $location, $window, $http, $routeParams, menusService, storage) {
+    $scope.shoppingCartKey = 'shoppingCart-appId-' + $routeParams.appId;
+    $scope.shoppingCart = storage.get($scope.shoppingCartKey);
 
     $scope.getTotalPrice = function(items) {
       var totalPrice = 0.0;
@@ -30,7 +32,7 @@ angular.module('webApp')
     $scope.updateShoppingCart = function(shoppingCart) {
       shoppingCart.totalPrice = $scope.getTotalPrice(shoppingCart.items);
       shoppingCart.quantity = $scope.getTotalQuantity(shoppingCart.items);
-      storage.set('shoppingCart', shoppingCart);
+      storage.set($scope.shoppingCartKey, shoppingCart);
     }
 
     $scope.removeItem = function(item) {
@@ -39,7 +41,7 @@ angular.module('webApp')
     };
 
     $scope.checkout = function() {
-      $location.path('checkout');
+      $location.path($routeParams.appId + '/checkout');
     };
   }])
   .directive('editableContent', function() {
