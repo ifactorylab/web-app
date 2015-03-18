@@ -33,18 +33,18 @@ angular
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
-          layout: function($q, $route, Layouts) {
+          layout: function($route, Layouts) {
             var appId = $route.current.params.appId;
             return Layouts.getLayout(appId);
-          },
-          menu: function($q, $route, Menus) {
+          }/*,
+          menu: function($route, Menus) {
             var appId = $route.current.params.appId;
             return Menus.getMenu(appId);
           },
-          location: function($q, $route, Locations) {
+          location: function($route, Locations) {
             var appId = $route.current.params.appId;
             return Locations.getLocation(appId);
-          }
+          }*/
         }
       })
       .otherwise({

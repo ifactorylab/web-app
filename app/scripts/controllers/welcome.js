@@ -16,10 +16,10 @@ angular.module('webApp')
                               '$routeParams',
                               'menusService',
                               'storage',
-                              'layout',
+                              'layout',/*
                               'menu',
-                              'location',
-  function($scope, $location, $window, $http, $timeout, $routeParams, menusService, storage, layout, menu, location) {
+                              'location',*/
+  function($scope, $location, $window, $http, $timeout, $routeParams, menusService, storage, layout/*, menu, location*/) {
     $scope.PARALLAX_FACTOR = 0.8;
     $scope.$$parllaxBackgrounds = {};
     $scope.$$parllaxItems = {};
@@ -33,9 +33,42 @@ angular.module('webApp')
     $scope.showPhotoViewerModal = false;
     $scope.showMenuViewerModal = false;
     $scope.selectedMenu = null;
-    $scope.attributes = layout.structure;
-    $scope.categories = menu;
-    $scope.locations = location;
+    // $scope.attributes = layout.structure;
+    $scope.attributes = layout.site;
+    var business = layout.site.business;
+    var hoursMap = {};
+
+    $scope.capitalize = function(s) {
+      return s[0].toUpperCase() + s.slice(1);
+    }
+
+    if (business.hours) {
+      var hours = business.hours;
+      var days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+      for (var i = 0; i < days.length; i++) {
+        var obj = hours[days[i]];
+        for (var k in obj) {
+          if (!hoursMap[obj[k].text]) {
+            hoursMap[obj[k].text] = [];
+          }
+          hoursMap[obj[k].text].push(obj[k].day);
+        }
+      }
+
+      $scope.hours = [];
+
+      for (var k in hoursMap) {
+        var days = hoursMap[k];
+        var first = days[0];
+        var last = days[days.length - 1];
+        $scope.hours.push({ "day": $scope.capitalize(first) + " - " + $scope.capitalize(last),
+                            "hour": k })
+      }
+    }
+
+    $scope.locations = [business];
+    // $scope.categories = menu;
+
     $scope.appId = $routeParams.appId;
     $scope.shoppingCartKey = 'shoppingCart-appId-' + $scope.appId
     $scope.shoppingCart = storage.get($scope.shoppingCartKey);

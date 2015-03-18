@@ -9,7 +9,7 @@
               <h3>LOCATION</h3>
               <p><em>{{location.name}}&nbsp;</em></p>
               <p>
-                <em></em>{{location.address1}}<br>{{location.address2}}<br>t. {{location.phone}}
+                <em></em>{{location.address}}<br>{{location.city}} {{location.postcode}}<br>{{location.country}}<br>t. {{location.phone}}
                 <span style="letter-spacing: 0px; line-height: 1.6em;">&nbsp;</span>
                 <br>
               </p>
@@ -30,7 +30,7 @@
           <div class="sqs-block html-block" id="block-31055818362aa3e07f9c">
             <div class="sqs-block-content" ng-repeat="location in locations">
               <h3>HOURS</h3>
-              <p ng-repeat="hour in location.hours">
+              <p ng-repeat="hour in hours">
                 <em style="letter-spacing: 0px; line-height: 1.6em;">{{hour.day}}<br></em>
                 <span style="letter-spacing: 0px; line-height: 1.6em;">{{hour.hour}}</span>
               </p>

@@ -21,9 +21,9 @@
 <section id="content-wrapper">
   <nav id="parallax-nav" style="margin-top: -45px;" class="hidden" parallax-nav>
     <ul>
-      <li ng-click="navigateTo('home')" hash-navigator='home'><a><span class="nav-title">{{attributes.sub_title1}}</span></a></li>
-      <li ng-click="navigateTo('menu')" hash-navigator='menu'><a><span class="nav-title">{{attributes.sub_title2}}</span></a></li>
-      <li ng-click="navigateTo('contact-us')" hash-navigator='contact-us'><a><span class="nav-title">{{attributes.sub_title3}}</span></a></li>
+      <li ng-click="navigateTo('home')" hash-navigator='home'><a><span class="nav-title">{{attributes.title1}}</span></a></li>
+      <li ng-click="navigateTo('menu')" hash-navigator='menu'><a><span class="nav-title">{{attributes.title2}}</span></a></li>
+      <li ng-click="navigateTo('contact-us')" hash-navigator='contact-us'><a><span class="nav-title">{{attributes.title3}}</span></a></li>
     </ul>
   </nav>
 
@@ -45,8 +45,8 @@
         <img data-src="{{attributes.main_background_img1}}" data-image="{{attributes.main_background_img1}}" data-image-dimensions="2448x1632" data-image-focal-point="0.5,0.5" alt="table1.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;" >{{attributes.sub_title1}}</h1><br>
-        <div class="page-desc"><p>{{attributes.sub_title_desc1}}<br></p></div>
+        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;" >{{attributes.title1}}</h1><br>
+        <div class="page-desc"><p>{{attributes.title_desc1}}<br></p></div>
       </div>
       <div class="scroll-arrow" style="display: block;"><span>SCROLL DOWN</span></div>
     </div>
@@ -55,8 +55,8 @@
       <div class="content-inner has-content">
         <div class="title-desc-wrapper">
           <div class="title-desc-inner">
-            <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.sub_title1}}</h1><br>
-            <div class="page-desc"><p>{{attributes.sub_title_desc1}}<br></p></div>
+            <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.title1}}</h1><br>
+            <div class="page-desc"><p>{{attributes.title_desc1}}<br></p></div>
           </div>
         </div>
         <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1384546464973" id="page-51e103a6e4b006993b364721">
@@ -79,10 +79,10 @@
                 <div class="col sqs-col-4 span-4">
                   <div class="sqs-block html-block" id="block-a115769e7b3ffb1c75d7">
                     <div class="sqs-block-content">
-                      <h1><span>{{attributes.content1_title}}</span></h1>
-                      <p>{{attributes.content1_line1}}</p>
-                      <p>{{attributes.content1_line2}}</p>
-                      <p>{{attributes.content1_line3}}</p>
+                      <h1><span>{{attributes.name}}</span></h1>
+                      <div ng-repeat="description in attributes.descriptions">
+                        <p>{{description}}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -104,8 +104,8 @@
               </div>
               <div class="sqs-block html-block" id="block-7bd4d36d0763947cbdfa">
                 <div class="sqs-block-content">
-                  <h2>{{attributes.content2_title}}</h2>
-                  <p>{{attributes.content2_line1}}</p>
+                  <h2>{{attributes.content1_title}}</h2>
+                  <p>{{attributes.content1_desc}}</p>
                 </div>
               </div>
             </div>
@@ -123,8 +123,8 @@
               </div>
               <div class="sqs-block html-block" id="block-90122c493503215a191f">
                 <div class="sqs-block-content">
-                  <h2>{{attributes.content3_title}}</h2>
-                  <p>{{attributes.content3_line1}}</p>
+                  <h2>{{attributes.content2_title}}</h2>
+                  <p>{{attributes.content2_desc}}</p>
                 </div>
               </div>
             </div>
@@ -142,8 +142,8 @@
               </div>
               <div class="sqs-block html-block" id="block-c2afa347da1fe7fea6b3">
                 <div class="sqs-block-content">
-                  <h2>{{attributes.content4_title}}</h2>
-                  <p>{{attributes.content4_line1}}</p>
+                  <h2>{{attributes.content3_title}}</h2>
+                  <p>{{attributes.content3_desc}}</p>
                 </div>
               </div>
             </div>
@@ -159,8 +159,8 @@
         <img data-src="{{attributes.main_background_img2}}" data-image="{{attributes.main_background_img2}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.sub_title2}}</h1><br>
-        <div class="page-desc"><p>{{attributes.sub_title_desc2}}</p></div>
+        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.title2}}</h1><br>
+        <div class="page-desc"><p>{{attributes.title_desc2}}</p></div>
       </div>
       <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
     </div>
@@ -168,7 +168,7 @@
       <div class="content-inner has-content">
         <div class="title-desc-wrapper">
           <div class="title-desc-inner">
-            <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.sub_title2}}</h1><br>
+            <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.title2}}</h1><br>
             <div class="page-desc"><p>{{location}}</p></div>
           </div>
         </div>
@@ -219,7 +219,7 @@
         <img data-src="{{attributes.main_background_img3}}" data-image="{{attributes.main_background_img3}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="table1-pov.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.sub_title3}}</h1><br>
+        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{attributes.title3}}</h1><br>
       </div>
       <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
     </div>

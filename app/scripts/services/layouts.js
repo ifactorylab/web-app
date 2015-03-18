@@ -9,10 +9,12 @@
  */
 angular.module('webApp')
   .factory('Layouts', function (Restangular, $q) {
-    var api = Restangular.setBaseUrl('');
+    // var api = Restangular.setBaseUrl('http://localhost:3000');
+    var api = Restangular.setBaseUrl('http://service-content.herokuapp.com');
+
     api.getLayout = function(layoutId) {
       var def = $q.defer();
-      this.one('layouts', layoutId + '.json').get().then(function(data) {
+      this.one('sites', layoutId).get().then(function(data) {
         def.resolve(data);
       });
       return def.promise;
