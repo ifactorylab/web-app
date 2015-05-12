@@ -33,8 +33,8 @@ angular.module('webApp')
     $scope.showPhotoViewerModal = false;
     $scope.showMenuViewerModal = false;
     $scope.selectedMenu = null;
-    // $scope.attributes = layout.structure;
-    $scope.attributes = layout.site;
+    $scope.site = layout.site;
+    $scope.pages = layout.site.pages;
     var business = layout.site.business;
     var hoursMap = {};
 
