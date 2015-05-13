@@ -35,7 +35,6 @@ angular.module('webApp')
     $scope.selectedMenu = null;
     $scope.site = layout.site;
     $scope.pages = layout.site.pages;
-    $scope.contentHost = 'http://service-content.herokuapp.com';
     var business = layout.site.business;
     var hoursMap = {};
 
