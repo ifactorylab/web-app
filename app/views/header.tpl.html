@@ -1,10 +1,9 @@
-<header id="header">
+<header id="header" style="background-color: {{style.header_background_color}}">
   <div class="title-nav-wrapper">
     <!--SITE TITLE OR LOGO-->
+    <img style="max-width: 240px;max-height: 40px;margin-right: 20px;" ng-src="{{style.logo.small_url}}" alt="{{style.title}}">
     <h1 data-content-field="site-title" class="site-title">
-      <a href="/" id="top">
-        {{site.name}}
-      </a>
+      <a href="/" id="top" style="color: {{style.header_title_color}}">{{style.title}}</a>
     </h1>
     <a class="icon-menu" id="mobileMenu"></a>
     <!--MAIN NAVIGATION-->
@@ -13,7 +12,7 @@
         <div class="nav-wrapper">
           <ul class="cf">
             <li class="index-collection active-link folder">
-              <a href="/"><span>Welcome</span></a>
+              <a href="/" style="color: {{style.header_title_color}}"><span>Welcome</span></a>
             </li>
             <!--li class="blog-collection">
               <a href="news.html"><span>News</span></a>

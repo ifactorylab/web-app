@@ -35,6 +35,7 @@ angular.module('webApp')
     $scope.selectedMenu = null;
     $scope.site = layout.site;
     $scope.pages = layout.site.pages;
+    $scope.style = layout.site.style;
     var business = layout.site.business;
     var hoursMap = {};
 

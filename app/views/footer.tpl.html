@@ -1,12 +1,12 @@
-<footer id="footer">
+<footer id="footer" style="background-color: {{style.footer_background_color}}">
   <div class="back-to-top-link"><a href="#/{{appId}}/#home"><span class="arrow"></span>Top</a></div>
-  <div class="footer-wrapper">
+  <div class="footer-wrapper" style="color: {{style.header_title_color}}">
     <div class="sqs-layout sqs-grid-12 columns-12" data-type="block-field" data-updated-on="1380143212258" id="footerBlocks">
       <div class="row sqs-row">
         <div class="col sqs-col-3 span-3">
           <div class="sqs-block html-block">
             <div class="sqs-block-content" ng-repeat="location in locations">
-              <h3>LOCATION</h3>
+              <h3 style="color: {{style.header_title_color}}">LOCATION</h3>
               <p><em>{{location.name}}&nbsp;</em></p>
               <p>
                 <em></em>{{location.address}}<br>{{location.city}} {{location.postcode}}<br>{{location.country}}<br>t. {{location.phone}}
@@ -29,7 +29,7 @@
         <div class="col sqs-col-3 span-3">
           <div class="sqs-block html-block" id="block-31055818362aa3e07f9c">
             <div class="sqs-block-content" ng-repeat="location in locations">
-              <h3>HOURS</h3>
+              <h3 style="color: {{style.header_title_color}}">HOURS</h3>
               <p ng-repeat="hour in hours">
                 <em style="letter-spacing: 0px; line-height: 1.6em;">{{hour.day}}<br></em>
                 <span style="letter-spacing: 0px; line-height: 1.6em;">{{hour.hour}}</span>
