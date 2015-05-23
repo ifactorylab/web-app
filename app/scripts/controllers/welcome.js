@@ -36,6 +36,7 @@ angular.module('webApp')
     $scope.site = layout.site;
     $scope.pages = layout.site.pages;
     $scope.style = layout.site.style;
+    $scope.categories = layout.site.products;
     var business = layout.site.business;
     var hoursMap = {};
 
