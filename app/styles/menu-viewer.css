@@ -182,19 +182,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media only screen and (max-width: 700px) {
+  #flowContent {
+    left: 10%;
+  }
+}
 @media screen and (min-width: 800px) {
   .sqs-cart-dropzone {
     top: 13px;
     right: 80px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .sqs-cart-dropzone {
-    top: 0;
-    right: 0;
-  }
-}
-@media screen and (min-width: 800px) {
   .wrapper {
     padding: 25px;
   }
@@ -217,10 +214,24 @@
     width: 38.2%;
   }
   #flowItems {
-    width: 61.8%;
+      left: 10%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #flowContent {
+    width: auto;
+    left: 640px;
+    padding: 65px;
+  }
+  .force-vertical-alignment-top.site-vertical-alignment-middle #flowContent {
+    top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
+  .sqs-cart-dropzone {
+    top: 0;
+    right: 0;
+  }
   .wrapper {
     padding: 65px;
     height: 100%;
@@ -236,14 +247,14 @@
   }
   #flowItems {
     width: 600px;
-    left: 5%;
+    left: 10%;
   }
   .flow-item-info {
     padding: 65px;
   }
   #flowContent {
     width: auto;
-    left: 700px;
+    left: 60%;
     padding: 65px;
   }
   #flowBody {
@@ -286,4 +297,16 @@
     left: 1040px;
     max-width: 800px;
   }
+}
+.collection-type-products.view-item .quantity-label, .collection-type-products.view-item .variant-option-title {
+  font-family: "Proxima Nova",Helvetica,Arial,sans-serif;
+  font-family: "proxima-nova";
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25em;
+  color: rgba(17,17,17,.38200000000000006);
+  margin-bottom: .618em;
 }
