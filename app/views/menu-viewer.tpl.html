@@ -26,14 +26,8 @@
               </div>
               <div id="flowItems" style="overflow-y: hidden">
                 <div id="flowScrollPrompt"></div>
-                <article class="flow-item">
-                  <img data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" class="" ng-src="{{selectedMenu.image.large_url}}" data-image-resolution="750w" style="">
-                </article>
-                <article class="flow-item">
-                  <img data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" class="" ng-src="{{selectedMenu.image.large_url}}" data-image-resolution="750w" style="">
-                </article>
-                <article class="flow-item">
-                  <img data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" class="" ng-src="{{selectedMenu.image.large_url}}" data-image-resolution="750w" style="">
+                <article class="flow-item" ng-repeat="image in selectedMenu.images">
+                  <img data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" class="" ng-src="{{image.large_url}}" data-image-resolution="750w" style="">
                 </article>
               </div>
             </div>
