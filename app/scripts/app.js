@@ -17,7 +17,10 @@ angular
     'ngSanitize',
     'ngTouch',
     'restangular',
-    'angularLocalStorage'
+    'angularLocalStorage',
+    'ui.bootstrap',
+    'ui.calendar',
+    'ui.utils'
   ])
   .config(function ($routeProvider) {
     $routeProvider

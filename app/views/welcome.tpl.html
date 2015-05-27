@@ -29,13 +29,16 @@
 
   <div id="parallax-images">
     <div class="image-container content-fill" data-url-id="home" layout-fill="1.0" parallax-background>
-      <img parallax data-image-dimensions="2448x1632" data-image-focal-point="0.5,0.5" class="loaded" alt="table1.jpg" ng-src="{{pages[0].background.large_url}}" />
+      <img parallax data-image-dimensions="2448x1632" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[0].background.large_url}}" />
     </div>
     <div class="image-container content-fill" data-url-id="menu" layout-fill="1.0" parallax-background>
-      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" alt="french-toast.jpg" ng-src="{{pages[1].background.large_url}}" data-image-resolution="1500w" />
+      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[1].background.large_url}}" data-image-resolution="1500w" />
+    </div>
+    <div class="image-container content-fill" data-url-id="reservation" layout-fill="1.0" parallax-background>
+      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="http://static1.squarespace.com/static/51e103a6e4b006993b36470a/t/532b8c0de4b08e1b0a17c302/1395362833255/whitetable-top.jpg" data-image-resolution="1500w" />
     </div>
     <div class="image-container content-fill" data-url-id="contact-us" layout-fill="1.0" parallax-background>
-      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" alt="table1-pov.jpg" ng-src="{{pages[2].background.large_url}}" data-image-resolution="1500w" />
+      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[2].background.large_url}}" data-image-resolution="1500w" />
     </div>
   </div>
 
@@ -210,6 +213,86 @@
                     </div>
                   </div>
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-item" data-url-id="reservation" parallax-item hash-item>
+    <div class="title-desc-wrapper over-image has-main-image" layout-fill="0.66" data-color-suggested="#b59984">
+      <div class="title-desc-image content-fill">
+        <img data-src="{{pages[1].background.large_url}}" data-image="{{pages[1].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
+      </div>
+      <div class="title-desc-inner" layout-center>
+        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">Reservation</h1><br>
+        <div class="page-desc"><p>We accept a limited number of reservations up to one month in advance for parties of up to ten guests.</p></div>
+      </div>
+      <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
+    </div>
+    <div class="content has-main-image">
+      <div class="content-inner has-content">
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1384546288153">
+          <div class="row sqs-row">
+            <div class="col sqs-col-12 span-12">
+              <div class="sqs-block reservation-block opentable-block ">
+                <div class="sqs-block-content">
+                  <div id="ot-reservations" class="">
+                    <div class="OT_wrapper">
+                      <div class="OT_header">
+                        <h1 class="OT_title" style="text-align: center">Make a Reservation</h1>
+                      </div>
+                      <div style="padding: 3%;padding-bottom: 10%;">
+                        <div class="form-group col-sm-4">
+                          <div class="col-md-2 col-sm-2" style="margin-top: 5px;display: inline-block;">
+                            <i class="glyphicon glyphicon-calendar" style="color: white;"></i>
+                          </div>
+                          <div style="width: 75%;margin-left: 5%;display: inline-block;" ng-controller="DatepickerDemoCtrl">
+                            <div class="input-group">
+                              <input type="text" class="form-control" datepicker-popup="{{format}}" show-button-bar="false" show-weeks="false" min-date="minDate" ng-model="dt" is-open=  "opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"  ></i></button>
+                              </span>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                          <div class="col-md-2 col-sm-2" style="margin-top: 5px;display: inline-block;">
+                            <i class="glyphicon glyphicon-time" style="color: white;"></i>
+                          </div>
+                          <div class="" style="width: 75%;margin-left: 5%;display: inline-block;" >
+                            <select ui-jq="chosen" ui-options="{
+                              width: '100%'
+                            }">
+                              <option value="CT">12:00 AM</option>
+                              <option value="DE">12:30 AM</option>
+                              <option value="FL">01:00 AM</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                          <div class="col-md-2 col-sm-2" style="margin-top: 5px;display: inline-block;">
+                            <i class="glyphicon glyphicon-user" style="color: white;"></i>
+                          </div>
+                          <div class="" style="width: 75%;margin-left: 5%;display: inline-block;" >
+                            <select ui-jq="chosen" ui-options="{
+                              width: '100%'
+                            }">
+                              <option value="CT">1 Person</option>
+                              <option value="DE">2 People</option>
+                              <option value="FL">3 People</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-wrapper" style="max-width: 100%;margin-bottom: 10%">
+                        <input class="button" style="margin-left: auto;margin-right: auto;" type="submit" value="Find a table">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
