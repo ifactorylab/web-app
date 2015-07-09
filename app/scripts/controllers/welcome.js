@@ -34,6 +34,7 @@ angular.module('webApp')
     $scope.showMenuViewerModal = false;
     $scope.selectedMenu = null;
     $scope.site = layout.site;
+    console.log($scope.site);
     $scope.pages = layout.site.pages;
     $scope.style = layout.site.style;
     $scope.categories = layout.site.products;
@@ -114,9 +115,10 @@ angular.module('webApp')
       $scope.enableScroll(true);
     };
 
-    $scope.closePhotoViewerModal = function() {
-      $scope.closeModal();
-      $scope.showPhotoViewerModal = false;
+    $scope.openMenuViewerModal = function(menu) {
+      $scope.openModal();
+      $scope.selectedMenu = menu;
+      $scope.showMenuViewerModal = true;
     };
 
     $scope.closeMenuViewerModal = function() {
@@ -124,15 +126,14 @@ angular.module('webApp')
       $scope.showMenuViewerModal = false;
     };
 
-    $scope.openMenuViewerModal = function(menu) {
-      $scope.openModal();
-      $scope.selectedMenu = menu;
-      $scope.showMenuViewerModal = true;
-    };
-
     $scope.openPhotoViewerModal = function() {
       $scope.openModal();
       $scope.showPhotoViewerModal = true;
+    };
+
+    $scope.closePhotoViewerModal = function() {
+      $scope.closeModal();
+      $scope.showPhotoViewerModal = false;
     };
 
     $scope.scrollTo = function(offset, hash) {
@@ -304,25 +305,22 @@ angular.module('webApp')
       });
     };
   })
-  .controller('DatepickerDemoCtrl', function ($scope) {
+  .controller('BookTableCtrl', function ($scope) {
     $scope.format = 'dd/MM/yyyy';
+    $scope.showBookingPage = false;
+    $scope.bookingNumPeople = 1;
 
     $scope.today = function() {
-      $scope.dt = new Date();
+      var today = new Date();
+      $scope.bookingDate = today.getDate() + '/' + (parseInt(today.getMonth()) + 1) + '/' + today.getFullYear();
     };
 
     $scope.today();
 
     $scope.clear = function () {
-      $scope.dt = null;
+      $scope.bookingDate = null;
     };
 
-/*
-    // Disable weekend selection
-    $scope.disabled = function(date, mode) {
-      return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-    };
-*/
     $scope.toggleMin = function() {
       $scope.minDate = $scope.minDate ? null : new Date();
     };
@@ -337,5 +335,9 @@ angular.module('webApp')
     $scope.dateOptions = {
       formatYear: 'yy',
       startingDay: 1,
+    };
+
+    $scope.findTable = function() {
+      $scope.showBookingPage = true;
     };
   });

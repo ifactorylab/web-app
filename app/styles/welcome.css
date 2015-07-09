@@ -3252,7 +3252,13 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 }
 .form-wrapper {
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
+.form-wrapper .caption, .title {
+  font-weight: normal;
+}
+
 .form-wrapper .field-list {
   line-height: normal;
 }
@@ -3697,15 +3703,15 @@ html.sqs-form-lightbox-open body {
 .opentable-block .OT_wrapper {
   border-radius: 0;
   border: 0;
-  background: #333;
+  color: #333;
   padding: 15px;
 }
 .opentable-block .OT_header {
   margin-bottom: 10px;
 }
 .opentable-block .OT_title {
-  color: #fff;
-  font-size: 1.2em;
+  color: #333;
+  font-size: 2.0em;
   padding: 15px 0 0;
 }
 .opentable-block .OT_subtitle {
@@ -3757,7 +3763,7 @@ html.sqs-form-lightbox-open body {
 .opentable-block a.OT_Find_a_Table:visited,
 .opentable-block a.OT_Find_a_Table:hover,
 .opentable-block a.OT_Find_a_Table:active {
-  color: #fff;
+  color: #333;
   background: #0d0d0d;
 }
 .hide-opentable-icons .opentable-block .OT_day,
@@ -3773,7 +3779,7 @@ html.sqs-form-lightbox-open body {
 .opentable-style-dark .opentable-block .OT_wrapper {
   border-radius: 0;
   border: 0;
-  background: #333;
+  color: #333;
 }
 .opentable-style-dark .opentable-block .OT_title {
   color: #111;

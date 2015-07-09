@@ -2,7 +2,6 @@
 
 angular.module('webApp')
   .controller('PhotoViewerCtrl', function($scope, $location) {
-  	console.log("PhotoViewerCtrl initialized!!!");
   })
   .directive('photoViewerModal', function($window) {
     return {
