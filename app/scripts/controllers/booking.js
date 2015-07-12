@@ -93,6 +93,7 @@ angular.module('webApp')
       $scope.booking.datetime =
         new Date(Date.parse($scope.bookingDate.toDateString() + " 00:00:00") +
           ($scope.bookingTime * 1000));
+      $scope.booking.gmt_offset = $scope.booking.datetime.getTimezoneOffset() * (-60);
     };
 
     $scope.hasError = function() {
