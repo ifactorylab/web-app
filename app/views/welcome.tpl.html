@@ -238,106 +238,112 @@
         <div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
           <div class="row sqs-row">
             <div class="col sqs-col-12 span-12">
-              <div class="sqs-block reservation-block opentable-block" ng-controller="BookTableCtrl">
+              <div class="sqs-block reservation-block opentable-block" ng-controller="BookingCtrl">
+
+                <div ng-show="bookingSucceeded || bookingFailed">
+                  <div class="form-wrapper" style="margin-top: 10%; margin-bottom: 10%;">
+                    <div ng-click="closeSubmissionText()" ng-show="bookingSucceeded" class="form-submission-text text-align-center success">Thank you for booking !!!</div>
+                    <div ng-click="closeSubmissionText()" ng-show="bookingFailed" class="form-submission-text text-align-center fail">Something bad happened, please try later again !!!</div>
+                  </div>
+                </div>
 
                 <div ng-show="showBookingPage">
-                <div class="sqs-block-content">
-                  <h3 class="text-align-center">Reservations</h3>
-                  <p class="text-align-center">Complete Your Reservation at {{site.business.name}}
-{{bookingDate}} at {{bookingTime}} for {{bookingNumPeople}}.</p>
+                  <div class="sqs-block-content">
+                    <h3 class="text-align-center">Reservations</h3>
+                    <p class="text-align-center">Complete Your Reservation at {{site.business.name}}
+  {{booking.datetime | date:"dd/MM/yyyy 'at' h:mma"}} for {{booking.number_of_person}}.</p>
 
-                </div>
-                <div class="sqs-block-content">
-                  <div class="form-wrapper" style="margin-top: 10%">
-                    <div class="form-inner-wrapper">
-                      <form autocomplete="on" action="https://www.xstuf.com/" method="POST">
-                        <div class="field-list clear">
-                          <fieldset class="form-item fields name required">
-                            <div class="title">Name <span class="required">*</span></div>
-                            <legend>Name</legend>
-                            <div class="field first-name">
-                              <label class="caption" style="float: left; width: 100%;"><input class="field-element field-control" name="fname" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30" data-title="First">
-                              First Name</label>
-                            </div>
-                            <div class="field last-name">
-                              <label class="caption" style="float: right; width: 100%;"><input class="field-element field-control" name="lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30" data-title="Last">
-                              Last Name</label>
-                            </div>
-                          </fieldset>
-                          <div class="form-item field email required">
-                            <label class="title">Email Address <span class="required">*</span></label>
-                            <input class="field-element" name="email" x-autocompletetype="email" type="text" spellcheck="false" >
-                          </div>
-                          <div class="form-item field phone required">
-                            <label class="title">Contact Number <span class="required">*</span></label>
-                            <input class="field-element" name="phone" x-autocompletetype="phone" type="text" spellcheck="false" >
-                          </div>
-                          <div class="form-item field textarea required">
-                            <label class="title">Note <span class="required">*</span></label>
-                            <textarea class="field-element" ></textarea>
-                          </div>
-                        </div>
-                        <input class="button" type="submit" value="Complete">
-                        <div class="hidden form-submission-text">Thank you!</div>
-                        <div class="hidden form-submission-html" data-submission-html=""></div>
-                      </form>
-                    </div>
                   </div>
-                </div>
-                </div>
-
-                <div ng-hide="showBookingPage" >
-                <div class="sqs-block-content">
-                  <h3 class="text-align-center">Reservations</h3>
-                  <p class="text-align-center">Call&nbsp;(347) 555–1234 from 5a – 11p daily, or book online.<br>Reservations required for parties of 6 or more.</p>
-                </div>
-
-                <div class="sqs-block-content">
-                  <div id="ot-reservations" class="">
-                    <div class="OT_wrapper">
-                      <div class="OT_header">
-                        <h1 class="OT_title" style="text-align: center">Make a Reservation</h1>
-                      </div>
-                      <div style="padding: 3%;padding-bottom: 10%;">
-                        <div class="form-group col-sm-4">
-                          <div class="" style='margin-left: 2%' >
-                            <div class="input-group">
-                              <input type="text" class="form-control" datepicker-popup="{{format}}" show-button-bar="false" show-weeks="false" min-date="minDate" ng-model="bookingDate" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                              <span class="input-group-btn">
-                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                              </span>
+                  <div class="sqs-block-content">
+                    <div class="form-wrapper" style="margin-top: 10%">
+                      <div class="form-inner-wrapper">
+                        <form autocomplete="on">
+                          <div ng-show="hasError()" class="field-error">Your form has encountered a problem. Please scroll down to review.</div>
+                          <div class="field-list clear">
+                            <fieldset class="form-item fields name required" ng-class="{error:errors.name}">
+                              <div ng-show="errors.name" class="field-error">Name is required.</div>
+                              <div class="title">Name <span class="required">*</span></div>
+                              <legend>Name</legend>
+                              <div class="field first-name">
+                              <label class="caption" style="float: left; width: 100%;"><input class="field-element field-control" name="  fname" x-autocompletetype="given-name" type="text" ng-model="booking.first_name" spellcheck="false" maxlength="30" data-title="First">
+                                First Name</label>
+                              </div>
+                              <div class="field last-name">
+                              <label class="caption" style="float: right; width: 100%;"><input class="field-element field-control" name=" lname" x-autocompletetype="surname" type="text" ng-model="booking.last_name" spellcheck="false" maxlength="30" data-title="Last">
+                                Last Name</label>
+                              </div>
+                            </fieldset>
+                            <div class="form-item field email required" ng-class="{error:errors.email}">
+                              <div ng-show="errors.email" class="field-error">Email Address is required.</div>
+                              <label class="title">Email Address <span class="required">*</span></label>
+                              <input class="field-element" name="email" ng-model="booking.email" x-autocompletetype="email" type="text" spellcheck="false" >
+                            </div>
+                            <div class="form-item field phone required" ng-class="{error:errors.phoneNumber}">
+                              <div ng-show="errors.phoneNumber" class="field-error">Contact Number is required.</div>
+                              <label class="title">Contact Number <span class="required">*</span></label>
+                              <input class="field-element" name="phone" ng-model="booking.phone_number" x-autocompletetype="phone" type="text" spellcheck="false" >
+                            </div>
+                            <div class="form-item field textarea">
+                              <label class="title">Note </label>
+                              <textarea class="field-element" ng-model="booking.note" ></textarea>
+                            </div>
                           </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-4">
-                          <div class="" style='margin-left: 2%' >
-                            <select ng-model="bookingTime" ui-jq="chosen" ui-options="{
-                              width: '98%'
-                            }">
-                              <option value="12:00">12:00 AM</option>
-                              <option value="12:30">12:30 AM</option>
-                              <option value="13:00">01:00 PM</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-4">
-                          <div class="" style='margin-left: 2%' >
-                            <select ng-model="bookingNumPeople" ui-jq="chosen" ui-options="{
-                              width: '98%'
-                            }">
-                              <option value="1">1 Person</option>
-                              <option value="2">2 People</option>
-                              <option value="3">3 People</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-wrapper" style="max-width: 100%;margin-bottom: 10%">
-                        <input class="button" style="margin-left: auto;margin-right: auto;" type="submit" value="Find a table" ng-click="findTable()">
+                          <input class="button" type="submit" value="Complete" ng-click="requestBooking()">
+                          <div class="hidden form-submission-html" data-submission-html=""></div>
+                          <div ng-show="hasError()" class="field-error">Your form has encountered a problem. Please scroll up to review.</div>
+                        </form>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <div ng-hide="showBookingPage">
+                  <div class="sqs-block-content">
+                    <h3 class="text-align-center">Reservations</h3>
+                    <form name="booking">
+                      <input ng-hide="true" class="form-control" id="masked" name="masked" ui-mask="(999) 999-9999" ng-model="locations[0].phone" />
+                      <p class="text-align-center">Call&nbsp; {{booking.masked.$viewValue}} from 9a – 11p daily, or book online.<br>Reservations required for parties of 4 or more.</p>
+                    </form>
+                  </div>
+
+                  <div class="sqs-block-content">
+                    <div id="ot-reservations" class="">
+                      <div class="OT_wrapper">
+                        <div class="OT_header">
+                          <h1 class="OT_title" style="text-align: center">Make a Reservation</h1>
+                        </div>
+                        <div style="padding: 3%;padding-bottom: 10%;">
+                          <div class="form-group col-sm-4">
+                            <div class="" style='margin-left: 2%' >
+                              <div class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-sm-4">
+                            <div class="" style='margin-left: 2%' >
+                              <select ng-model="bookingTime" ui-jq="chosen" ui-options="{ width: '98%' }">
+                                <option ng-repeat="(key, value) in bookingTimeSlots" value="{{key}}">{{value}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group col-sm-4">
+                            <div class="" style='margin-left: 2%' >
+                              <select ng-model="bookingNumPerson" ui-jq="chosen" ui-options="{ width: '98%' }">
+                                <option ng-repeat="(key, value) in bookingNumPeople" value="{{key}}">{{value}}</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-wrapper" style="max-width: 100%;margin-bottom: 10%">
+                          <input class="button" style="margin-left: auto;margin-right: auto;" type="submit" value="Find a table" ng-click="findTable()">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               </div>

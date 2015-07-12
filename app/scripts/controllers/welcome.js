@@ -304,40 +304,5 @@ angular.module('webApp')
         scope.$apply();
       });
     };
-  })
-  .controller('BookTableCtrl', function ($scope) {
-    $scope.format = 'dd/MM/yyyy';
-    $scope.showBookingPage = false;
-    $scope.bookingNumPeople = 1;
-
-    $scope.today = function() {
-      var today = new Date();
-      $scope.bookingDate = today.getDate() + '/' + (parseInt(today.getMonth()) + 1) + '/' + today.getFullYear();
-    };
-
-    $scope.today();
-
-    $scope.clear = function () {
-      $scope.bookingDate = null;
-    };
-
-    $scope.toggleMin = function() {
-      $scope.minDate = $scope.minDate ? null : new Date();
-    };
-    $scope.toggleMin();
-
-    $scope.open = function($event) {
-      $event.preventDefault();
-      $event.stopPropagation();
-      $scope.opened = true;
-    };
-
-    $scope.dateOptions = {
-      formatYear: 'yy',
-      startingDay: 1,
-    };
-
-    $scope.findTable = function() {
-      $scope.showBookingPage = true;
-    };
   });
+

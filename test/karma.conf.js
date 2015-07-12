@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/restangular/dist/restangular.js',
       'bower_components/angularLocalStorage/src/angularLocalStorage.js',
       'bower_components/chosen/chosen.jquery.min.js',
+      'bower_components/angular-ui-mask/dist/mask.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
