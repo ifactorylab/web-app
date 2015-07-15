@@ -302,7 +302,9 @@
                     <h3 class="text-align-center">{{pages[2].contents[0].title}}</h3>
                     <form name="bookingForm">
                       <input ng-hide="true" class="form-control" id="masked" name="masked" ui-mask="(999) 999-9999" ng-model="locations[0].phone" />
-                      <p class="text-align-center">Call&nbsp; {{bookingForm.masked.$viewValue}} from 9a – 11p daily, or book online.<br>Reservations required for parties of 4 or more.</p>
+                      <p style="margin: 0px" class="text-align-center" ng-repeat="description in pages[2].contents[0].description">
+                        {{description}}
+                      </p>
                     </form>
                   </div>
 
