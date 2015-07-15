@@ -105,6 +105,10 @@ angular.module('webApp')
       $scope.bookingFailed = false;
     };
 
+    $scope.joinWithBR = function(description) {
+      return description.join("<br />");
+    }
+
     $scope.requestBooking = function() {
       var booking = $scope.booking;
       console.log($scope.booking);
