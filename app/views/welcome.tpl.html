@@ -247,11 +247,62 @@
                   </div>
                 </div>
 
-                <div ng-show="showBookingPage">
+                <div ng-hide="showBookingPage">
                   <div class="sqs-block-content">
                     <h3 class="text-align-center">{{pages[2].contents[0].title}}</h3>
-                    <p class="text-align-center">Complete Your Reservation at {{site.business.name}}
-  {{booking.datetime | date:"dd/MM/yyyy 'at' h:mma"}} for {{booking.number_of_person}}.</p>
+                    <form name="bookingForm">
+                      <input ng-hide="true" class="form-control" id="masked" name="masked" ui-mask="(999) 999-9999" ng-model="locations[0].phone" />
+                      <p style="margin: 0px" class="text-align-center" ng-repeat="description in pages[2].contents[0].description">
+                        {{description}}
+                      </p>
+                    </form>
+                  </div>
+
+                  <div class="sqs-block-content">
+                    <div id="ot-reservations" class="">
+                      <div class="OT_wrapper">
+                        <div class="OT_header">
+                          <h1 class="OT_title" style="text-align: center">{{pages[2].contents[1].title}}</h1>
+                        </div>
+                        <div style="padding: 3%;padding-bottom: 10%;">
+                          <div ng-class="['form-group', {true:'col-sm-4', false:'col-sm-6'}[pages[2].contents[1].options.show_people_selector]]">
+                            <div class="" style='margin-left: 2%' >
+                              <div class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div ng-class="['form-group', {true:'col-sm-4', false:'col-sm-6'}[pages[2].contents[1].options.show_people_selector]]">
+                            <div class="" style='margin-left: 2%' >
+                              <select ng-model="bookingTime" ui-jq="chosen" ui-options="{ width: '98%' }">
+                                <option ng-repeat="(key, value) in bookingTimeSlots" value="{{key}}">{{value}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div ng-show="{{pages[2].contents[1].options.show_people_selector}}" class="form-group col-sm-4">
+                            <div class="" style='margin-left: 2%' >
+                              <select ng-model="bookingNumPerson" ui-jq="chosen" ui-options="{ width: '98%' }">
+                                <option ng-repeat="(key, value) in bookingNumPeople" value="{{key}}">{{value}}</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-wrapper" style="max-width: 100%;margin-bottom: 10%">
+                          <input class="button" style="margin-left: auto;margin-right: auto;" type="submit" value="{{pages[2].contents[1].description[0]}}" ng-click="findTable()">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div ng-show="showBookingPage">
+                  <div class="sqs-block-content">
+                    <h3 class="text-align-center">{{pages[2].contents[2].title}}</h3>
+                    <p class="text-align-center">{{pages[2].contents[2].description[0]}}<br>
+  {{booking.datetime | date:"dd/MM/yyyy 'at' h:mma"}} {{pages[2].contents[1].options.show_people_selector === "true" ? "for " + booking.number_of_person : ""}} .</p>
 
                   </div>
                   <div class="sqs-block-content">
@@ -292,57 +343,6 @@
                           <div class="hidden form-submission-html" data-submission-html=""></div>
                           <div ng-show="hasError()" class="field-error">Your form has encountered a problem. Please scroll up to review.</div>
                         </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div ng-hide="showBookingPage">
-                  <div class="sqs-block-content">
-                    <h3 class="text-align-center">{{pages[2].contents[0].title}}</h3>
-                    <form name="bookingForm">
-                      <input ng-hide="true" class="form-control" id="masked" name="masked" ui-mask="(999) 999-9999" ng-model="locations[0].phone" />
-                      <p style="margin: 0px" class="text-align-center" ng-repeat="description in pages[2].contents[0].description">
-                        {{description}}
-                      </p>
-                    </form>
-                  </div>
-
-                  <div class="sqs-block-content">
-                    <div id="ot-reservations" class="">
-                      <div class="OT_wrapper">
-                        <div class="OT_header">
-                          <h1 class="OT_title" style="text-align: center">Make a Reservation</h1>
-                        </div>
-                        <div style="padding: 3%;padding-bottom: 10%;">
-                          <div class="form-group col-sm-4">
-                            <div class="" style='margin-left: 2%' >
-                              <div class="input-group">
-                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
-                                <span class="input-group-btn">
-                                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group col-sm-4">
-                            <div class="" style='margin-left: 2%' >
-                              <select ng-model="bookingTime" ui-jq="chosen" ui-options="{ width: '98%' }">
-                                <option ng-repeat="(key, value) in bookingTimeSlots" value="{{key}}">{{value}}</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-group col-sm-4">
-                            <div class="" style='margin-left: 2%' >
-                              <select ng-model="bookingNumPerson" ui-jq="chosen" ui-options="{ width: '98%' }">
-                                <option ng-repeat="(key, value) in bookingNumPeople" value="{{key}}">{{value}}</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-wrapper" style="max-width: 100%;margin-bottom: 10%">
-                          <input class="button" style="margin-left: auto;margin-right: auto;" type="submit" value="Find a table" ng-click="findTable()">
-                        </div>
                       </div>
                     </div>
                   </div>
