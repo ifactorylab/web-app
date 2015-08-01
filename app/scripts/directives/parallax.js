@@ -63,7 +63,7 @@ angular.module('webApp')
       });
     };
   })
-  .directive('parallax', function($window) {
+  .directive('parallax', function($window, $timeout) {
     return function(scope, element, attrs) {
       var w = angular.element($window);
       var PARALLAX_IMAGE_RATIO = 2 / 3;
@@ -96,7 +96,7 @@ angular.module('webApp')
           left = (width - window.width()) / 2;
         }
 
-        if (window.width() <= MIN_WIDTH) {
+        if (window.width() < MIN_WIDTH) {
           if (height * ratio <= window.width()) {
             return;
           }
@@ -110,8 +110,13 @@ angular.module('webApp')
           left: parseInt(left * -1)
         });
       };
-      scope.renderParallaxImage(scope.PARALLAX_FACTOR, w, element, attrs);
-      scope.ratioAspectToFit(PARALLAX_IMAGE_RATIO, w, element);
+
+      var allContentLoaded = function() {
+        scope.renderParallaxImage(scope.PARALLAX_FACTOR, w, element, attrs);
+        scope.ratioAspectToFit(PARALLAX_IMAGE_RATIO, w, element);
+      };
+
+      $timeout(allContentLoaded, 200);
 
       w.bind('scroll', function() {
         scope.renderParallaxImage(scope.PARALLAX_FACTOR, w, element, attrs);

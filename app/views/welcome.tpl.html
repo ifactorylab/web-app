@@ -48,7 +48,10 @@
         <img data-src="{{pages[0].background.large_url}}" data-image="{{pages[0].background.large_url}}" data-image-dimensions="2448x1632" data-image-focal-point="0.5,0.5" alt="table1.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;" >{{pages[0].title}}</h1><br>
+        <div class="page-title-wrapper">
+          <h1 class="page-title" data-shrink-original-size="39" style="letter-spacing: 0.17948717948718em;" >{{pages[0].title}}</h1>
+        </div>
+        <br>
         <div class="page-desc"><p>{{pages[0].description}}<br></p></div>
       </div>
       <div class="scroll-arrow" style="display: block;"><span>SCROLL DOWN</span></div>
@@ -168,8 +171,11 @@
         <img data-src="{{pages[1].background.large_url}}" data-image="{{pages[1].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{pages[1].title}}</h1><br>
-        <div class="page-desc"><p>{{pages[1].description}}</p></div>
+        <div class="page-title-wrapper">
+          <h1 class="page-title" data-shrink-original-size="39" style="letter-spacing: 0.17948717948718em;">{{pages[1].title}}</h1>
+        </div>
+        <br>
+        <div class="page-desc"><p>{{pages[1].description}}<br></p></div>
       </div>
       <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
     </div>
@@ -228,8 +234,11 @@
         <img data-src="{{pages[2].background.large_url}}" data-image="{{pages[2].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{pages[2].title}}</h1><br>
-        <div class="page-desc"><p>{{pages[2].description}}</p></div>
+        <div class="page-title-wrapper">
+          <h1 class="page-title" data-shrink-original-size="39" style="letter-spacing: 0.17948717948718em;">{{pages[2].title}}</h1>
+        </div>
+        <br>
+        <div class="page-desc"><p>{{pages[2].description}}<br></p></div>
       </div>
       <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
     </div>
@@ -266,7 +275,7 @@
                         </div>
                         <div style="padding: 3%;padding-bottom: 10%;">
                           <div ng-class="['form-group', {true:'col-sm-4', false:'col-sm-6'}[pages[2].contents[1].options.show_people_selector]]">
-                            <div class="" style='margin-left: 2%' >
+                            <div>
                               <div class="input-group">
                                 <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
                                 <span class="input-group-btn">
@@ -276,15 +285,15 @@
                             </div>
                           </div>
                           <div ng-class="['form-group', {true:'col-sm-4', false:'col-sm-6'}[pages[2].contents[1].options.show_people_selector]]">
-                            <div class="" style='margin-left: 2%' >
-                              <select ng-model="bookingTime" ui-jq="chosen" ui-options="{ width: '98%' }">
+                            <div>
+                              <select ng-model="bookingTime" class="form-control">
                                 <option ng-repeat="(key, value) in bookingTimeSlots" value="{{key}}">{{value}}</option>
                               </select>
                             </div>
                           </div>
                           <div ng-show="{{pages[2].contents[1].options.show_people_selector}}" class="form-group col-sm-4">
-                            <div class="" style='margin-left: 2%' >
-                              <select ng-model="bookingNumPerson" ui-jq="chosen" ui-options="{ width: '98%' }">
+                            <div>
+                              <select ng-model="bookingNumPerson" class="form-control">
                                 <option ng-repeat="(key, value) in bookingNumPeople" value="{{key}}">{{value}}</option>
                               </select>
                             </div>
@@ -362,8 +371,11 @@
         <img data-src="{{pages[3].background.large_url}}" data-image="{{pages[3].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false">
       </div>
       <div class="title-desc-inner" layout-center>
-        <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{pages[3].title}}</h1><br>
-        <div class="page-desc"><p>{{pages[3].description}}</p></div>
+        <div class="page-title-wrapper">
+          <h1 class="page-title" data-shrink-original-size="39" style="letter-spacing: 0.17948717948718em;">{{pages[3].title}}</h1>
+        </div>
+        <br>
+        <div class="page-desc"><p>{{pages[3].description}}<br></p></div>
       </div>
       <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
     </div>

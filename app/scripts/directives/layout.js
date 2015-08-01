@@ -14,8 +14,10 @@ angular.module('webApp')
         element.css({
           top: '50%',
           left: '50%',
-          marginTop: element[0].offsetHeight * -0.5,
-          marginLeft: element[0].offsetWidth * -0.5
+          transform: 'translateX(-50%) translateY(-50%)'
+
+          // marginTop: element[0].offsetHeight * -0.5,
+          // marginLeft: element[0].offsetWidth * -0.5
         });
       };
 
