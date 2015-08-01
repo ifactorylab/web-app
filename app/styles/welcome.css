@@ -624,19 +624,19 @@ body.native-currency-code-gbp .sqs-money-native:before{content:'£';}
 body.native-currency-code-eur .sqs-money-native:before{content:'€';}
 body.native-currency-code-aud .sqs-money-native:before{content:'$';}
 body.native-currency-code-aud .sqs-money-native:after{content:' AUD';}
-@font-face{font-family:'squarespace-ui-font';src:url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.eot');src:url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.eot?#iefix') format('embedded-opentype'),url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.svg#squarespace-ui-font') format('svg'),url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.woff') format('woff'),url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.ttf') format('truetype');font-weight:normal;font-style:normal;}
-.sqs-ui-font-family{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
-[class^="sqs-ui-font-"]:before,[class*=" sqs-ui-font-"]:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
-[data-icon]:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:attr(data-icon);}
+@font-face{font-family:'bazaar-ui-font';src:url('/fonts/bazaar-ui-font.eot');src:url('/fonts/bazaar-ui-font.eot?#iefix') format('embedded-opentype'),url('/fonts/bazaar-ui-font.svg#bazaar-ui-font') format('svg'),url('/fonts/bazaar-ui-font.woff') format('woff'),url('/fonts/bazaar-ui-font.ttf') format('truetype');font-weight:normal;font-style:normal;}
+.sqs-ui-font-family{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
+[class^="sqs-ui-font-"]:before,[class*=" sqs-ui-font-"]:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;}
+[data-icon]:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:attr(data-icon);}
 .sqs-gallery-container a{border-bottom:0 !important;}
 .sqs-gallery-container iframe{width:100%;height:100%;background:transparent;display:block;}
 .sqs-gallery-controls .previous,.sqs-gallery-controls .next{position:absolute;top:50%;outline:none;color:#fff !important;z-index:999;font-size:14px;line-height:40px;margin-top:-30px;background-color:rgba(0,0,0,.12);display:inline-block;padding:10px;-webkit-transition:all 200ms cubic-bezier(.25,.46,.45,.94);-moz-transition:all 200ms cubic-bezier(.25,.46,.45,.94);-ms-transition:all 200ms cubic-bezier(.25,.46,.45,.94);-o-transition:all 200ms cubic-bezier(.25,.46,.45,.94);transition:all 200ms cubic-bezier(.25,.46,.45,.94);}
 .sqs-gallery-controls .previous:hover,.sqs-gallery-controls .next:hover{background-color:rgba(0,0,0,.2);color:#fff;}
 .sqs-gallery-controls .previous{left:0px;}
-.sqs-gallery-controls .previous:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02c";text-align:center;display:inline-block;vertical-align:middle;}
+.sqs-gallery-controls .previous:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02c";text-align:center;display:inline-block;vertical-align:middle;}
 .sqs-gallery-controls .previous:before{font-size:32px;width:32px;height:32px;line-height:32px;}
 .sqs-gallery-controls .next{right:0px;}
-.sqs-gallery-controls .next:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02d";text-align:center;display:inline-block;vertical-align:middle;}
+.sqs-gallery-controls .next:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02d";text-align:center;display:inline-block;vertical-align:middle;}
 .sqs-gallery-controls .next:before{font-size:32px;width:32px;height:32px;line-height:32px;}
 .sqs-gallery-controls .next:before,.sqs-gallery-controls .previous:before{font-size:24px;width:24px;height:24px;line-height:24px;}
 .sqs-gallery-design-stacked{position:relative;text-align:left;}
@@ -671,14 +671,14 @@ body.native-currency-code-aud .sqs-money-native:after{content:' AUD';}
 .yui3-lightbox2 .sqs-lightbox-next,.yui3-lightbox2 .sqs-lightbox-previous{padding:12px;opacity:0;top:50%;margin-top:-22px;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;}
 .yui3-lightbox2 .sqs-lightbox-next.mouseover,.yui3-lightbox2 .sqs-lightbox-previous.mouseover{opacity:1;}
 .yui3-lightbox2 .sqs-lightbox-next{right:2%;}
-.yui3-lightbox2 .sqs-lightbox-next:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02d";text-align:center;display:inline-block;vertical-align:middle;}
+.yui3-lightbox2 .sqs-lightbox-next:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02d";text-align:center;display:inline-block;vertical-align:middle;}
 .yui3-lightbox2 .sqs-lightbox-next:before{font-size:32px;width:32px;height:32px;line-height:32px;}
 .yui3-lightbox2 .sqs-lightbox-previous{left:2%;}
-.yui3-lightbox2 .sqs-lightbox-previous:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02c";text-align:center;display:inline-block;vertical-align:middle;}
+.yui3-lightbox2 .sqs-lightbox-previous:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02c";text-align:center;display:inline-block;vertical-align:middle;}
 .yui3-lightbox2 .sqs-lightbox-previous:before{font-size:32px;width:32px;height:32px;line-height:32px;}
 .yui3-lightbox2 .sqs-lightbox-next::before,.yui3-lightbox2 .sqs-lightbox-previous::before{font-size:22px;}
 .yui3-lightbox2 .sqs-lightbox-close{padding:2px;right:2%;top:2%;text-align:right;}
-.yui3-lightbox2 .sqs-lightbox-close:before{font-family:'squarespace-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02e";text-align:center;display:inline-block;vertical-align:middle;}
+.yui3-lightbox2 .sqs-lightbox-close:before{font-family:'bazaar-ui-font';font-style:normal;speak:none;font-weight:normal;-webkit-font-smoothing:antialiased;content:"\e02e";text-align:center;display:inline-block;vertical-align:middle;}
 .yui3-lightbox2 .sqs-lightbox-close:before{font-size:32px;width:32px;height:32px;line-height:32px;}
 .yui3-lightbox2 .sqs-lightbox-meta-trigger{bottom:0;right:0;padding:2%;text-align:center;font-size:26px;line-height:.5;text-align:right;}
 body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
@@ -1471,14 +1471,14 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 /* FONT FILES & FAMILY
 -------------------------------------------------*/
 @font-face {
-  font-family: 'squarespace-ui-font';
-  src: url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.eot');
-  src: url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.eot?#iefix') format('embedded-opentype'), url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.svg#squarespace-ui-font') format('svg'), url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.woff') format('woff'), url('http://static.squarespace.com/universal/fonts/squarespace-ui-font.ttf') format('truetype');
+  font-family: 'bazaar-ui-font';
+  src: url('/fonts/bazaar-ui-font.eot');
+  src: url('/fonts/bazaar-ui-font.eot?#iefix') format('embedded-opentype'), url('/fonts/bazaar-ui-font.svg#bazaar-ui-font') format('svg'), url('/fonts/bazaar-ui-font.woff') format('woff'), url('/fonts/bazaar-ui-font.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 .sqs-ui-font-family {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -1490,7 +1490,7 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 -------------------------------------------------*/
 [class^="sqs-ui-font-"]:before,
 [class*=" sqs-ui-font-"]:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -1499,7 +1499,7 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 /* USE FONT VIA [data-icon]
 -------------------------------------------------*/
 [data-icon]:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -1517,7 +1517,7 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 }
 #list-paging a.newer .pagination-icon:before,
 #item-paging a.newer .pagination-icon:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -1543,7 +1543,7 @@ body.sqs-lightbox-open{position:static !important;overflow-y:hidden;}
 }
 #list-paging a.older .pagination-icon:after,
 #item-paging a.older .pagination-icon:after {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -3842,8 +3842,8 @@ html.sqs-form-lightbox-open body {
 }
 @font-face {
   font-family: 'social-icon-font';
-  src: url('http://static.squarespace.com/universal/fonts/social-icon-font.eot');
-  src: url('http://static.squarespace.com/universal/fonts/social-icon-font.eot?#iefix') format('embedded-opentype'), url('http://static.squarespace.com/universal/fonts/social-icon-font.woff') format('woff'), url('http://static.squarespace.com/universal/fonts/social-icon-font.ttf') format('truetype'), url('http://static.squarespace.com/universal/fonts/social-icon-font.svg#social-icon-font') format('svg');
+  src: url('/fonts/social-icon-font.eot');
+  src: url('/fonts/social-icon-font.eot?#iefix') format('embedded-opentype'), url('/fonts/social-icon-font.woff') format('woff'), url('/fonts/social-icon-font.ttf') format('truetype'), url('/fonts/social-icon-font.svg#social-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5301,7 +5301,7 @@ hr {
   box-sizing: border-box;
 }
 .parallax-item .scroll-arrow:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -5658,7 +5658,7 @@ h1.page-title {
   margin: 0 auto 4px;
 }
 .collection-type-index .back-to-top-link a .arrow:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -5745,7 +5745,7 @@ h1.page-title {
 }
 .entry-actions .entry-comments:before,
 .entry-actions-simple .entry-comments:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -5782,7 +5782,7 @@ h1.page-title {
 }
 .entry-actions .sqs-simple-like .like-count:before,
 .entry-actions-simple .sqs-simple-like .like-count:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -5814,7 +5814,7 @@ h1.page-title {
   display: none;
 }
 .ss-social-button:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6236,7 +6236,7 @@ h1.page-title {
   transition: color .14s ease;
 }
 .icon-menu:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6283,8 +6283,8 @@ h1.page-title {
 }
 @font-face {
   font-family: 'social-icon-font';
-  src: url('http://static.squarespace.com/universal/fonts/social-icon-font.eot');
-  src: url('http://static.squarespace.com/universal/fonts/social-icon-font.eot?#iefix') format('embedded-opentype'), url('http://static.squarespace.com/universal/fonts/social-icon-font.woff') format('woff'), url('http://static.squarespace.com/universal/fonts/social-icon-font.ttf') format('truetype'), url('http://static.squarespace.com/universal/fonts/social-icon-font.svg#social-icon-font') format('svg');
+  src: url('/fonts/social-icon-font.eot');
+  src: url('/fonts/social-icon-font.eot?#iefix') format('embedded-opentype'), url('/fonts/social-icon-font.woff') format('woff'), url('/fonts/social-icon-font.ttf') format('truetype'), url('/fonts/social-icon-font.svg#social-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6603,7 +6603,7 @@ h1.page-title {
   margin-right: 8px;
 }
 .event-icon-date:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6620,7 +6620,7 @@ h1.page-title {
   line-height: 16px;
 }
 .event-icon-time:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6637,7 +6637,7 @@ h1.page-title {
   line-height: 16px;
 }
 .event-icon-address:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6654,7 +6654,7 @@ h1.page-title {
   line-height: 16px;
 }
 .event-icon-tags:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6671,7 +6671,7 @@ h1.page-title {
   line-height: 16px;
 }
 .event-icon-cats:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6831,7 +6831,7 @@ h1.page-title {
   margin-left: .5em;
 }
 .eventitem-pager-newer .eventitem-pager-icon:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6857,7 +6857,7 @@ h1.page-title {
   margin-right: .5em;
 }
 .eventitem-pager-older .eventitem-pager-icon:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6923,7 +6923,7 @@ h1.page-title {
   color: #fff;
 }
 .yui3-eventcollectioncalendar .yui3-calendarnav-prevmonth:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -6946,7 +6946,7 @@ h1.page-title {
   line-height: 16px;
 }
 .yui3-eventcollectioncalendar .yui3-calendarnav-nextmonth:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -7656,7 +7656,7 @@ h1.page-title {
   user-select: none;
 }
 .collection-type-gallery:not(.gallery-design-grid) .sqs-system-gallery .arrow.previous-slide:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -7679,7 +7679,7 @@ h1.page-title {
   line-height: 40px;
 }
 .collection-type-gallery:not(.gallery-design-grid) .sqs-system-gallery .arrow.next-slide:before {
-  font-family: 'squarespace-ui-font';
+  font-family: 'bazaar-ui-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
