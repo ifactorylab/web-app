@@ -22,7 +22,8 @@ angular
     'ui.calendar',
     'ui.utils'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/:appId/show-cart', {
         templateUrl: 'views/show-cart-view.tpl.html',
@@ -32,12 +33,12 @@ angular
         templateUrl: 'views/checkout-view.tpl.html',
         controller: 'CheckoutCtrl'
       })
-      .when('/:appId', {
+      .when('/', {
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
-          layout: function($route, Layouts) {
-            var appId = $route.current.params.appId;
+          layout: function($route, $location, Layouts) {
+            var appId = $location.search().app_id;
             return Layouts.getLayout(appId);
           }/*,
           menu: function($route, Menus) {
