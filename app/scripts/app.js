@@ -33,12 +33,13 @@ angular
         templateUrl: 'views/checkout-view.tpl.html',
         controller: 'CheckoutCtrl'
       })
-      .when('/', {
+      .when('/:appId', {
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
           layout: function($route, $location, Layouts) {
-            var appId = $location.search().app_id;
+            var appId = $route.current.params.appId;
+            // var appId = $location.search().app_id;
             return Layouts.getLayout(appId);
           }/*,
           menu: function($route, Menus) {
