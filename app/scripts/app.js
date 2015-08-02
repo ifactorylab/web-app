@@ -52,6 +52,13 @@ angular
         }
       })
       .otherwise({
-        redirectTo: '/1'
+        templateUrl: 'views/welcome.tpl.html',
+        controller: 'WelcomeCtrl',
+        resolve: {
+          layout: function($route, $location, Layouts) {
+            var appId = $location.search().app_id;
+            return Layouts.getLayout(appId);
+          }
+        }
       });
   });
