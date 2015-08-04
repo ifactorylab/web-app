@@ -35,22 +35,22 @@ angular.module('webApp')
     $scope.showMenuViewerModal = false;
     $scope.selectedMenu = null;
     $scope.site = layout.site;
-    console.log($scope.site);
     $scope.pages = layout.site.pages;
     $scope.style = layout.site.style;
     $scope.categories = layout.site.products;
     var business = layout.site.business;
     var hoursMap = {};
 
-    $scope.capitalize = function(s) {
-      return s[0].toUpperCase() + s.slice(1);
-    }
-
-    $rootScope.metatags =  {
+    console.log($scope.site);
+    $rootScope.metatags = {
       title: $scope.site.name,
       description: $scope.site.description.join(""),
       robots: "index, follow",
       keywords: $scope.site.keywords
+    };
+
+    $scope.capitalize = function(s) {
+      return s[0].toUpperCase() + s.slice(1);
     }
 
     if (business.hours) {
@@ -73,7 +73,7 @@ angular.module('webApp')
         var first = days[0];
         var last = days[days.length - 1];
         $scope.hours.push({ "day": $scope.capitalize(first) + " - " + $scope.capitalize(last),
-                            "hour": k })
+                            "hour": k });
       }
     }
 
@@ -81,7 +81,7 @@ angular.module('webApp')
     // $scope.categories = menu;
 
     $scope.appId = $routeParams.appId;
-    $scope.shoppingCartKey = 'shoppingCart-appId-' + $scope.appId
+    $scope.shoppingCartKey = 'shoppingCart-appId-' + $scope.appId;
     $scope.shoppingCart = storage.get($scope.shoppingCartKey);
 
     if (typeof $scope.shoppingCart !== 'object' || !$scope.shoppingCart) {

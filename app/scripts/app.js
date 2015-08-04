@@ -41,6 +41,16 @@ angular
           layout: function($route, $location, Layouts) {
             var appId = $route.current.params.appId;
             return Layouts.getLayout(appId);
+          }
+        }
+      })
+      .when('/', {
+        templateUrl: 'views/welcome.tpl.html',
+        controller: 'WelcomeCtrl',
+        resolve: {
+          layout: function($route, $location, Layouts) {
+            var appId = $location.search().app_id;
+            return Layouts.getLayout(appId);
           }/*,
           menu: function($route, Menus) {
             var appId = $route.current.params.appId;
@@ -55,7 +65,6 @@ angular
       .otherwise({
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
-        reloadOnSearch: false,
         resolve: {
           layout: function($route, $location, Layouts) {
             var appId = $location.search().app_id;
