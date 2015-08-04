@@ -14,12 +14,13 @@ angular.module('webApp')
                               '$http',
                               '$timeout',
                               '$routeParams',
+                              '$rootScope',
                               'menusService',
                               'storage',
                               'layout',/*
                               'menu',
                               'location',*/
-  function($scope, $location, $window, $http, $timeout, $routeParams, menusService, storage, layout/*, menu, location*/) {
+  function($scope, $location, $window, $http, $timeout, $routeParams, $rootScope, menusService, storage, layout/*, menu, location*/) {
     $scope.PARALLAX_FACTOR = 0.8;
     $scope.$$parllaxBackgrounds = {};
     $scope.$$parllaxItems = {};
@@ -43,6 +44,13 @@ angular.module('webApp')
 
     $scope.capitalize = function(s) {
       return s[0].toUpperCase() + s.slice(1);
+    }
+
+    $rootScope.metatags =  {
+      title: $scope.site.name,
+      description: $scope.site.description.join(""),
+      robots: "index, follow",
+      keywords: $scope.site.keywords
     }
 
     if (business.hours) {

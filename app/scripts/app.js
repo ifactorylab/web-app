@@ -24,6 +24,7 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
     $routeProvider
       .when('/:appId/show-cart', {
         templateUrl: 'views/show-cart-view.tpl.html',
@@ -39,7 +40,6 @@ angular
         resolve: {
           layout: function($route, $location, Layouts) {
             var appId = $route.current.params.appId;
-            // var appId = $location.search().app_id;
             return Layouts.getLayout(appId);
           }/*,
           menu: function($route, Menus) {
@@ -55,6 +55,7 @@ angular
       .otherwise({
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
+        reloadOnSearch: false,
         resolve: {
           layout: function($route, $location, Layouts) {
             var appId = $location.search().app_id;
