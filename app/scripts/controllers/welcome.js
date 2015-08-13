@@ -41,6 +41,9 @@ angular.module('webApp')
     var business = layout.site.business;
     var hoursMap = {};
 
+    // $scope.map = {center: {latitude: 51.219053, longitude: 4.404418 }, zoom: 14 };
+    // $scope.options = {scrollwheel: false};
+
     console.log($scope.site);
     $rootScope.metatags = {
       title: $scope.site.name,
@@ -89,8 +92,13 @@ angular.module('webApp')
     }
 
     var allContentLoaded = function() {
-      angular.element($window).trigger('redraw');
+      // angular.element($window).trigger('redraw');
     };
+
+    $scope.$on('$viewContentLoaded', function() {
+      angular.element($window).trigger('redraw');
+      $window.prerenderReady = true;
+    });
 
     $timeout(allContentLoaded, 100);
 

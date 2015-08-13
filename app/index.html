@@ -2,9 +2,9 @@
 <html class="no-js" ng-app="webApp">
   <head>
     <meta charset="utf-8">
+    <meta name="fragment" content="!">
     <title>{{ metatags.title }}</title>
     <meta name="description" content="{{ metatags.description }}" >
-    <meta name="fragment" content="!">
     <meta name="robots" content="{{ metatags.robots }}" >
     <meta name="keywords" content="{{ metatags.keywords }}">
     <meta name="viewport" content="width=device-width">
@@ -87,6 +87,7 @@
        ga('create', 'UA-65857998-1', 'auto');
        ga('send', 'pageview');
     </script>
+    <script> window.prerenderReady = false; </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -111,6 +112,7 @@
     <script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
     <script src="bower_components/chosen/chosen.jquery.min.js"></script>
     <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -125,8 +127,6 @@
     <script src="scripts/services/menus-service.js"></script>
     <script src="scripts/directives/layout.js"></script>
     <script src="scripts/services/layouts.js"></script>
-    <script src="scripts/services/locations.js"></script>
-    <script src="scripts/services/menus.js"></script>
     <script src="scripts/services/bookings.js"></script>
     <script src="scripts/directives/parallax.js"></script>
     <!-- endbuild -->

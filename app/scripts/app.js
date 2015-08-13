@@ -24,7 +24,8 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
-    $locationProvider.hashPrefix('!');
+    // $locationProvider.hashPrefix('!');
+
     $routeProvider
       .when('/:appId/show-cart', {
         templateUrl: 'views/show-cart-view.tpl.html',
@@ -38,28 +39,10 @@ angular
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
-          layout: function($route, $location, Layouts) {
+          layout: function($route, Layouts) {
             var appId = $route.current.params.appId;
             return Layouts.getLayout(appId);
           }
-        }
-      })
-      .when('/', {
-        templateUrl: 'views/welcome.tpl.html',
-        controller: 'WelcomeCtrl',
-        resolve: {
-          layout: function($route, $location, Layouts) {
-            var appId = $location.search().app_id;
-            return Layouts.getLayout(appId);
-          }/*,
-          menu: function($route, Menus) {
-            var appId = $route.current.params.appId;
-            return Menus.getMenu(appId);
-          },
-          location: function($route, Locations) {
-            var appId = $route.current.params.appId;
-            return Locations.getLocation(appId);
-          }*/
         }
       })
       .otherwise({
