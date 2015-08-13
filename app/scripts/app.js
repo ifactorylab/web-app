@@ -22,11 +22,14 @@ angular
     'ui.calendar',
     'ui.utils'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, $windowProvider) {
     $locationProvider.html5Mode(true);
     // $locationProvider.hashPrefix('!');
 
+    var appId = $windowProvider.$get().appId;
+
     $routeProvider
+    /*
       .when('/:appId/show-cart', {
         templateUrl: 'views/show-cart-view.tpl.html',
         controller: 'ShowCartCtrl'
@@ -45,12 +48,21 @@ angular
           }
         }
       })
+*/
+      .when('/', {
+        templateUrl: 'views/welcome.tpl.html',
+        controller: 'WelcomeCtrl',
+        resolve: {
+          layout: function($route, Layouts) {
+            return Layouts.getLayout(appId);
+          }
+        }
+      })
       .otherwise({
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
         resolve: {
-          layout: function($route, $location, Layouts) {
-            var appId = $location.search().app_id;
+          layout: function($route, Layouts) {
             return Layouts.getLayout(appId);
           }
         }

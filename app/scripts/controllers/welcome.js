@@ -17,10 +17,8 @@ angular.module('webApp')
                               '$rootScope',
                               'menusService',
                               'storage',
-                              'layout',/*
-                              'menu',
-                              'location',*/
-  function($scope, $location, $window, $http, $timeout, $routeParams, $rootScope, menusService, storage, layout/*, menu, location*/) {
+                              'layout',
+  function($scope, $location, $window, $http, $timeout, $routeParams, $rootScope, menusService, storage, layout) {
     $scope.PARALLAX_FACTOR = 0.8;
     $scope.$$parllaxBackgrounds = {};
     $scope.$$parllaxItems = {};
@@ -91,16 +89,10 @@ angular.module('webApp')
       $scope.shoppingCart = {'quantity': 0, 'items': {}, 'totalPrice': 0.0};
     }
 
-    var allContentLoaded = function() {
-      // angular.element($window).trigger('redraw');
-    };
-
     $scope.$on('$viewContentLoaded', function() {
       angular.element($window).trigger('redraw');
       $window.prerenderReady = true;
     });
-
-    $timeout(allContentLoaded, 100);
 
     angular.element($window).bind('update_cart', function() {
       $scope.shoppingCart = menusService.getShoppingCart();
