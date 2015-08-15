@@ -24,7 +24,7 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider, $windowProvider) {
     $locationProvider.html5Mode(true);
-    // $locationProvider.hashPrefix('!');
+    $locationProvider.hashPrefix('!');
 
     var appId = $windowProvider.$get().appId;
 
