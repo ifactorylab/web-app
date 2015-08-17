@@ -38,6 +38,7 @@ angular
         templateUrl: 'views/checkout-view.tpl.html',
         controller: 'CheckoutCtrl'
       })
+  */
       .when('/:appId', {
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
@@ -48,7 +49,6 @@ angular
           }
         }
       })
-*/
       .when('/', {
         templateUrl: 'views/welcome.tpl.html',
         controller: 'WelcomeCtrl',
