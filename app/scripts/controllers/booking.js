@@ -54,7 +54,8 @@ angular.module('webApp')
     $scope.bookingTime = 8 * 3600;
 
     $scope.disabled = function(date, mode) {
-      return ( mode === 'day' && ( date.getDay() === 0 ) );
+      // return ( mode === 'day' && ( date.getDay() === 0 ) );
+      return false;
     };
 
     $scope.today = function() {
@@ -71,7 +72,7 @@ angular.module('webApp')
     };
     $scope.toggleMin();
     $scope.maxDate = new Date();
-    $scope.maxDate.setDate($scope.maxDate.getDate() + 14);
+    $scope.maxDate.setDate($scope.maxDate.getDate() + 365);
 
     $scope.open = function($event) {
       $event.preventDefault();
