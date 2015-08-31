@@ -14,8 +14,8 @@ angular.module('webApp')
         element.css({
           top: '50%',
           left: '50%',
-          transform: 'translateX(-50%) translateY(-50%)'
-
+          transform: 'translateX(-50%) translateY(-50%)',
+          position: 'absolute'
           // marginTop: element[0].offsetHeight * -0.5,
           // marginLeft: element[0].offsetWidth * -0.5
         });
