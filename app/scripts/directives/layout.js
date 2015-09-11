@@ -72,7 +72,7 @@ angular.module('webApp')
     };
   })
   .directive('layoutFullscreen', function($window) {
-    return function(scope, element, attrs) {
+    return function(scope, element) {
       var w = angular.element($window);
       scope.scaleToFill = function(window, scaleFactor, element) {
         element.css({
@@ -90,7 +90,7 @@ angular.module('webApp')
     };
   })
   .directive('layoutRatioAspectToFit', function($window) {
-    return function(scope, element, attrs) {
+    return function(scope, element) {
       var w = angular.element($window);
       var POPUP_IMAGE_RATIO = 2 / 3;
       var MIN_WIDTH = 320;

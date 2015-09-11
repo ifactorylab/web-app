@@ -29,7 +29,7 @@ angular.module('webApp')
       };
 
       $scope.addToCart = function(item, quantity) {
-        console.log(item.name + " x " + quantity + " has added to cart!!!");
+        console.log(item.name + ' x ' + quantity + ' has added to cart!!!');
         var count = parseInt(quantity);
         $scope.shoppingCart.quantity += count;
         $scope.setItem(item, count, $scope.shoppingCart.items);

@@ -45,18 +45,18 @@ angular.module('webApp')
     console.log($scope.site);
     $rootScope.metatags = {
       title: $scope.site.name,
-      description: $scope.site.description.join(""),
-      robots: "index, follow",
+      description: $scope.site.description.join(''),
+      robots: 'index, follow',
       keywords: $scope.site.keywords
     };
 
     $scope.capitalize = function(s) {
       return s[0].toUpperCase() + s.slice(1);
-    }
+    };
 
     if (business.hours) {
       var hours = business.hours;
-      var days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+      var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
       for (var i = 0; i < days.length; i++) {
         var obj = hours[days[i]];
         for (var k in obj) {
@@ -73,8 +73,8 @@ angular.module('webApp')
         var days = hoursMap[k];
         var first = days[0];
         var last = days[days.length - 1];
-        $scope.hours.push({ "day": $scope.capitalize(first) + " - " + $scope.capitalize(last),
-                            "hour": k });
+        $scope.hours.push({ 'day': $scope.capitalize(first) + ' - ' + $scope.capitalize(last),
+                            'hour': k });
       }
     }
 
@@ -234,7 +234,7 @@ angular.module('webApp')
             if (scope.inViewPort(top, pi.height())) {
               var hash = $location.hash();
               if (hash !== '' && hash !== itemId) {
-                // console.log("hash changed222!!!")
+                // console.log('hash changed222!!!')
                 // $location.hash(itemId);
               }
             }

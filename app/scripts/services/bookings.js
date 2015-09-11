@@ -13,7 +13,7 @@ angular.module('webApp')
 
     api.request = function(siteId, booking) {
       var def = $q.defer();
-      this.one('sites', siteId).post("booking", { booking: booking }).then(function(data) {
+      this.one('sites', siteId).post('booking', { booking: booking }).then(function(data) {
         def.resolve(data);
       });
       return def.promise;

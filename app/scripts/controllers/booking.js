@@ -20,33 +20,33 @@ angular.module('webApp')
     $scope.errors.phoneNumber = false;
 
     for (var i = 8; i < 24; i++) {
-      var string1 = "";
-      var string2 = "";
-      var unit = "AM";
+      var string1 = '';
+      var string2 = '';
+      var unit = 'AM';
       if (i > 11) {
-        unit = "PM";
+        unit = 'PM';
       }
 
       var hh = i;
       if (i < 10) {
-        hh = "0" + i;
+        hh = '0' + i;
       } else if (i > 12) {
         hh = i - 12;
       }
 
-      string1 = hh + ":00 " + unit;
-      string2 = hh + ":30 " + unit;
+      string1 = hh + ':00 ' + unit;
+      string2 = hh + ':30 ' + unit;
 
       $scope.bookingTimeSlots[i * 3600] = string1;
       $scope.bookingTimeSlots[i * 3600 + 30 * 60] = string2;
     }
 
     for (var i = 1; i < 7; i++) {
-      var unit = "People";
+      var unit = 'People';
       if (i < 2) {
-        unit = "Person";
+        unit = 'Person';
       }
-      $scope.bookingNumPeople[i] = i + " " + unit;
+      $scope.bookingNumPeople[i] = i + ' ' + unit;
     }
 
     $scope.booking = {};
@@ -86,13 +86,13 @@ angular.module('webApp')
       startingDay: 1,
     };
 
-    $scope.format = "EEE MMM dd yyyy";
+    $scope.format = 'EEE MMM dd yyyy';
 
     $scope.findTable = function() {
       $scope.showBookingPage = true;
       $scope.booking.number_of_person = $scope.bookingNumPerson;
       $scope.booking.datetime =
-        new Date(Date.parse($scope.bookingDate.toDateString() + " 00:00:00") +
+        new Date(Date.parse($scope.bookingDate.toDateString() + ' 00:00:00') +
           ($scope.bookingTime * 1000));
       $scope.booking.gmt_offset = $scope.booking.datetime.getTimezoneOffset() * (-60);
     };
@@ -107,16 +107,16 @@ angular.module('webApp')
     };
 
     $scope.joinWithBR = function(description) {
-      return description.join("<br />");
-    }
+      return description.join('<br />');
+    };
 
     $scope.requestBooking = function() {
       var booking = $scope.booking;
       console.log($scope.booking);
-      $scope.errors.name = (booking.first_name == null || booking.last_name == null ||
-        booking.first_name == "" || booking.last_name == "");
-      $scope.errors.email = (booking.email == null || booking.email == "");
-      $scope.errors.phoneNumber = (booking.phone_number == null || booking.phone_number == "");
+      $scope.errors.name = (booking.first_name === null || booking.last_name === null ||
+        booking.first_name === '' || booking.last_name === '');
+      $scope.errors.email = (booking.email === null || booking.email === '');
+      $scope.errors.phoneNumber = (booking.phone_number === null || booking.phone_number === '');
 
       if (!$scope.hasError()) {
         bookingApi.request($scope.site.id, booking).then(function(data) {

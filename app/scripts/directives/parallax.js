@@ -69,7 +69,7 @@ angular.module('webApp')
       var PARALLAX_IMAGE_RATIO = 2 / 3;
       var MIN_WIDTH = 320;
 
-      scope.renderParallaxImage = function(factor, window, element, attrs) {
+      scope.renderParallaxImage = function(factor, window, element) {
         var itemId = element.parent().attr('data-url-id');
         var offset = $window.pageYOffset;
         if (scope.$$parllaxItems[itemId]) {
