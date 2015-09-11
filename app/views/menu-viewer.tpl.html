@@ -9,7 +9,10 @@
               <div id="flowContent" style="">
                 <a class="flow-back" ng-click="closeMenuViewerModal()">Menu</a>
                 <h1 class="product-title">{{selectedMenu.name}}</h1>
-                <div class="product-price">{{selectedMenu.currency? selectedMenu.currency : "£"}}<span class="currency-sign">{{selectedMenu.price}}</span></div>
+                <div class="product-price">{{selectedMenu.currency? selectedMenu.currency : "£"}}
+                  <span class="currency-sign">{{selectedMenu.price}}</span>
+                  <span ng-show="selectedMenu.unit">/ {{selectedMenu.unit}}</span>
+                </div>
                 <div class="product-excerpt">
                   <p>{{selectedMenu.description}}</p>
                   <p>Category - {{selectedMenu.category}}</p>
