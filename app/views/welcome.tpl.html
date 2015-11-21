@@ -31,9 +31,6 @@
     <div class="image-container content-fill" data-url-id="home" layout-fill="1.0" parallax-background>
       <img parallax data-image-dimensions="2448x1632" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[0].background.large_url}}" />
     </div>
-    <div class="image-container content-fill" data-url-id="team" layout-fill="1.0" parallax-background>
-      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[4].background.large_url}}" data-image-resolution="1500w" />
-    </div>
     <div class="image-container content-fill" data-url-id="menu" layout-fill="1.0" parallax-background>
       <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[1].background.large_url}}" data-image-resolution="1500w" />
     </div>
@@ -42,6 +39,12 @@
     </div>
     <div class="image-container content-fill" data-url-id="contact-us" layout-fill="1.0" parallax-background>
       <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[3].background.large_url}}" data-image-resolution="1500w" />
+    </div>
+    <div class="image-container content-fill" data-url-id="recruit" layout-fill="1.0" parallax-background>
+      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[4].background.large_url}}" data-image-resolution="1500w" />
+    </div>
+    <div class="image-container content-fill" data-url-id="faq" layout-fill="1.0" parallax-background>
+      <img parallax data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" class="loaded" ng-src="{{pages[5].background.large_url}}" data-image-resolution="1500w" />
     </div>
   </div>
 
@@ -285,7 +288,7 @@
                           <div ng-class="['form-group', {true:'col-sm-4', false:'col-sm-6'}[pages[2].contents[1].options.show_people_selector]]">
                             <div>
                               <div class="input-group">
-                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
+                                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="bookingDate" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" show-button-bar="false" close-text="Close" />
                                 <span class="input-group-btn">
                                   <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                                 </span>
@@ -375,7 +378,7 @@
 
   <!-- page -->
 
-  <div ng-show="pages[4].enabled"  class="parallax-item" data-url-id="team" parallax-item hash-item>
+  <div ng-show="pages[4].enabled"  class="parallax-item" data-url-id="recruit" parallax-item hash-item>
     <div class="title-desc-wrapper over-image has-main-image" layout-fill="0.66" data-color-suggested="#b59984">
       <div class="title-desc-image content-fill">
         <img data-src="{{pages[4].background.large_url}}" data-image="{{pages[4].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
@@ -422,6 +425,70 @@
                       <div ng-repeat="description in pages[4].contents[0].description">
                         <p>{{description}}</p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- page -->
+
+  <div ng-show="pages[5].enabled"  class="parallax-item" data-url-id="faq" parallax-item hash-item>
+    <div class="title-desc-wrapper over-image has-main-image" layout-fill="0.66" data-color-suggested="#b59984">
+      <div class="title-desc-image content-fill">
+        <img data-src="{{pages[5].background.large_url}}" data-image="{{pages[5].background.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" alt="french-toast.jpg" data-load="false">
+      </div>
+      <div class="title-desc-inner" layout-center>
+        <div class="page-title-wrapper">
+          <h1 class="page-title" data-shrink-original-size="39" style="letter-spacing: 0.17948717948718em;">{{pages[5].title}}</h1>
+        </div>
+        <br>
+        <div class="page-desc"><p>{{pages[5].description}}<br></p></div>
+      </div>
+      <div class="scroll-arrow"><span>SCROLL DOWN</span></div>
+    </div>
+
+    <div class="content has-main-image">
+      <div class="content-inner has-content">
+        <div class="title-desc-wrapper">
+          <div class="title-desc-inner">
+            <h1 class="page-title data-shrink-ready" data-shrink-original-spacing="7" data-shrink-original-size="39" style="letter-spacing: 7px;">{{pages[5].title}}</h1><br>
+            <div class="page-desc"><p>{{pages[5].description}}<br></p></div>
+          </div>
+        </div>
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
+          <div class="row sqs-row">
+            <div class="col sqs-col-12 span-12">
+              <div class="row sqs-row">
+                <div class="col sqs-col-6 span-6">
+                  <div class="sqs-block image-block">
+                    <div class="sqs-block-content">
+                      <div class="image-block-outer-wrapper layout-caption-below ">
+                        <div class="intrinsic" style="max-width:1200.0px;">
+                          <div style="padding-bottom:66.66667175292969%;" class="image-block-wrapper lightbox " data-description="" >
+                            <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d237e4b007de26302046" data-type="image" style="" ng-src="images/faq.png" data-image-resolution="750w">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col sqs-col-6 span-6">
+                  <div class="sqs-block html-block">
+                    <div class="sqs-block-content">
+                      <uib-accordion close-others="oneAtATime">
+                        <uib-accordion-group ng-repeat="content in pages[5].contents">
+                          <uib-accordion-heading>
+                            {{content.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                          </uib-accordion-heading>
+                          {{content.description[0]}}
+                        </uib-accordion-group>
+                      </uib-accordion>
                     </div>
                   </div>
                 </div>
