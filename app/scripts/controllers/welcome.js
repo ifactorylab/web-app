@@ -41,18 +41,6 @@ angular.module('webApp')
 
     $scope.oneAtATime = true;
 
-  $scope.groups = [
-    {
-      title: 'Dynamic Group Header - 1',
-      content: 'Dynamic Group Body - 1'
-    },
-    {
-      title: 'Dynamic Group Header - 2',
-      content: 'Dynamic Group Body - 2'
-    }
-  ];
-
-
     // $scope.map = {center: {latitude: 51.219053, longitude: 4.404418 }, zoom: 14 };
     // $scope.options = {scrollwheel: false};
 
