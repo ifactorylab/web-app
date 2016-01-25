@@ -82,7 +82,7 @@
                       <div class="image-block-outer-wrapper layout-caption-below ">
                         <div class="intrinsic" style="max-width:1200.0px;">
                           <div style="padding-bottom:66.66667175292969%;" class="image-block-wrapper lightbox " data-description="" >
-                            <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d237e4b007de26302046" data-type="image" style="" alt="spirit-outside.jpg" ng-src="{{pages[0].contents[0].image.large_url}}" data-image-resolution="750w">
+                            <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d237e4b007de26302046" data-type="image" style="position: absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" ng-src="{{pages[0].contents[0].image.large_url}}" data-image-resolution="750w">
                           </div>
                         </div>
                       </div>
@@ -109,7 +109,7 @@
                   <div class="image-block-outer-wrapper layout-caption-below">
                     <div class="intrinsic" style="max-width:100%;">
                       <div style="padding-bottom: 68.68686868686868% !important; height: auto !important;" class="image-block-wrapper lightbox content-fill" data-description="">
-                        <img photo-viewer class="thumb-image loaded" ng-src="{{pages[0].contents[1].image.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d257e4b0779ebbdd0914" data-type="image" style="max-width: none; top: 0px; left: -4px; position: absolute;" alt="espresso.jpg" data-image-resolution="500w">
+                        <img photo-viewer class="thumb-image loaded" ng-src="{{pages[0].contents[1].image.large_url}}" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d257e4b0779ebbdd0914" data-type="image" style="position: absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" data-image-resolution="500w">
                       </div>
                     </div>
                   </div>
@@ -130,7 +130,7 @@
                   <div class="image-block-outer-wrapper layout-caption-below ">
                     <div class="intrinsic" style="max-width:1200.0px;">
                       <div style="padding-bottom: 68.68686868686868% !important; height: auto !important;" class="image-block-wrapper lightbox content-fill" data-description="">
-                        <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d276e4b007de263020b4" data-type="image" style="max-width: none; top: 0px; left: -4px; position: absolute;" alt="baking.jpg" ng-src="{{pages[0].contents[2].image.large_url}}" data-image-resolution="500w">
+                        <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d276e4b007de263020b4" data-type="image" style="position: absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" ng-src="{{pages[0].contents[2].image.large_url}}" data-image-resolution="500w">
                       </div>
                     </div>
                   </div>
@@ -151,7 +151,7 @@
                   <div class="image-block-outer-wrapper layout-caption-below ">
                     <div class="intrinsic" style="max-width:1200.0px;">
                       <div style="padding-bottom: 68.68686868686868% !important; height: auto !important;" class="image-block-wrapper lightbox content-fill" data-description="">
-                        <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d296e4b02ac5ba22315f" data-type="image" style="max-width: none; top: 0px; left: -4px; position: absolute;" alt="eggs-hash.jpg" ng-src="{{pages[0].contents[3].image.large_url}}" data-image-resolution="500w">
+                        <img photo-viewer class="thumb-image loaded" data-image-dimensions="1200x800" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="51e4d296e4b02ac5ba22315f" data-type="image" style="position: absolute;margin: auto;top: 0;left: 0;right: 0;bottom: 0;" ng-src="{{pages[0].contents[3].image.large_url}}" data-image-resolution="500w">
                       </div>
                     </div>
                   </div>
@@ -160,9 +160,9 @@
               <div class="sqs-block html-block" id="block-c2afa347da1fe7fea6b3">
                 <div class="sqs-block-content">
                   <h2>{{pages[0].contents[3].title}}</h2>
-                  <!--div ng-repeat="description in pages[0].contents[3].description"-->
-                    <p>{{pages[0].contents[3].description[0]}}</p>
-                  <!--/div-->
+                  <div ng-repeat="description in pages[0].contents[3].description">
+                    <p>{{description}}</p>
+                  </div>
                 </div>
               </div>
             </div>
